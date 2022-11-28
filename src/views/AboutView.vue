@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AboutSpecific from "../components/AboutSpecific.vue";
+import SecondAboutSpecific from "../components/SecondAboutSpecific.vue";
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import AboutSpecific from "../components/AboutSpecific.vue";
     <AboutSpecific
       data="This is a created variable in AboutView which is given as a prop to the AboutSpecific component!"
     />
+    <SecondAboutSpecific />
   </div>
 </template>
 

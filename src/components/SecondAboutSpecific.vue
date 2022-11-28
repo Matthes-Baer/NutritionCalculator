@@ -15,9 +15,4 @@ export default {
 <template>
   <!-- <div>{{ data }}</div> -->
   <h2>{{ store.count }}</h2>
-  <button @click="store.increment()">count += 1 (with store method)</button>
-  <button @click="store.count++">
-    count += 1 (directly adjusting the state in the component without method)
-  </button>
-  {{ store.clickText }} {{ store.enterText }}
 </template>
