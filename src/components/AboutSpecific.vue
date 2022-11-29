@@ -1,14 +1,16 @@
 <script lang="ts">
-// defineProps<{ data: string }>();
-
 import { store } from "../store";
 
 export default {
   data() {
     return {
       store,
+      enterText: "",
     };
   },
+  props: ["data"],
+  components: {},
+  methods: {},
 };
 </script>
 
@@ -19,5 +21,9 @@ export default {
   <button @click="store.count++">
     count += 1 (directly adjusting the state in the component without method)
   </button>
-  {{ store.clickText }} {{ store.enterText }}
+  <input v-model="enterText" @keyup.enter="store.updateText(enterText)" />
+  <h3>{{ enterText }}</h3>
+
+  {{ store.text }}
+  <h3>{{ data }}</h3>
 </template>
