@@ -18,4 +18,5 @@ export default {
 
 <template>
   <div v-for="item in items" :key="item.id">{{ item.name }}</div>
+  <div v-for="item in store.itemsData" :key="item.id">{{ item.name }}</div>
 </template>
