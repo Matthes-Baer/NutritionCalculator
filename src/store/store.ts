@@ -6,10 +6,24 @@ export const store = reactive({
   text: "Hey",
   // Can be put in the store or as a variable in the respective component.
   itemsData: items,
+  currentNutrtion: { kcal: 0, sugar: 0, fat: 0, proteine: 0, items: [""] },
   updateText(input: string) {
     this.text += input;
   },
-  increment() {
+  increment: function () {
     this.count++;
+  },
+  addToCurrentNutrition: function (
+    kcal: number,
+    fat: number,
+    sugar: number,
+    proteine: number,
+    name: string
+  ) {
+    store.currentNutrtion.kcal += kcal;
+    store.currentNutrtion.fat += fat;
+    store.currentNutrtion.sugar += sugar;
+    store.currentNutrtion.proteine += proteine;
+    store.currentNutrtion.items.push(name);
   },
 });

@@ -29,4 +29,13 @@ export default {
       v-bind:product="item"
     />
   </div>
+
+  <h3>Current Nutrition values</h3>
+  <h4>Kcal: {{ store.currentNutrtion.kcal }}</h4>
+  <h4>Fat: {{ store.currentNutrtion.fat }}</h4>
+  <h4>Sugar: {{ store.currentNutrtion.sugar }}</h4>
+  <h4>Proteine: {{ store.currentNutrtion.proteine }}</h4>
+  <div v-for="(item, index) in store.currentNutrtion.items" :key="index">
+    {{ item }}
+  </div>
 </template>
