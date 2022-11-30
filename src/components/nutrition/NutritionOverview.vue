@@ -30,6 +30,15 @@ export default {
     />
   </div>
 
+  <div>
+    Derzeit kann einem bestimmten Food-Item im Nachhinein nicht anerkannt
+    werden, wie viel Nährwerte diesem Item zuzuweisen sind. Um eine solche Logik
+    zu implementieren, bräuchte man einen state mit Array, das jedes Food-Item
+    auflistet und jeweilig spezifisch/individuell die dazugehörigen Werte
+    zuweist
+    <h3>Es sollte von Kommazahlen abgewichen werden.</h3>
+  </div>
+
   <h3>Current Nutrition values</h3>
   <h4>Kcal: {{ store.currentNutrtion.kcal }}</h4>
   <h4>Fat: {{ store.currentNutrtion.fat }}</h4>
