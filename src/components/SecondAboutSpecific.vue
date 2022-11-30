@@ -1,7 +1,7 @@
 <script lang="ts">
 // defineProps<{ data: string }>();
 
-import { store } from "../store";
+import { store } from "../store/store";
 
 export default {
   data() {
