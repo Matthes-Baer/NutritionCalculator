@@ -13,17 +13,22 @@ export const store = reactive({
   increment: function () {
     this.count++;
   },
-  addToCurrentNutrition: function (
-    kcal: number,
-    fat: number,
-    sugar: number,
-    proteine: number,
-    name: string
-  ) {
-    store.currentNutrtion.kcal += kcal;
-    store.currentNutrtion.fat += fat;
-    store.currentNutrtion.sugar += sugar;
-    store.currentNutrtion.proteine += proteine;
-    store.currentNutrtion.items.push(name);
-  },
+  //! Currently I'm using a method directly in the respecitve component
+  // addToCurrentNutrition: function (
+  //   kcal: number,
+  //   fat: number,
+  //   sugar: number,
+  //   proteine: number,
+  //   name: string
+  // ) {
+  //   if (kcal | fat | sugar | proteine) {
+  //     store.currentNutrtion.kcal += kcal;
+  //     store.currentNutrtion.fat += fat;
+  //     store.currentNutrtion.sugar += sugar;
+  //     store.currentNutrtion.proteine += proteine;
+  //     store.currentNutrtion.items.push(name);
+  //   } else {
+  //     alert("Pick a value for kcal, fat, sugar and/or proteine");
+  //   }
+  // },
 });
