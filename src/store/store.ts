@@ -1,17 +1,18 @@
 import { reactive } from "vue";
 import items from "../data/items";
 
-export const store = reactive({
-  count: 0,
-  text: "Hey",
+export const nutritionStore = reactive({
   // Can be put in the store or as a variable in the respective component.
   itemsData: items,
   currentNutrtion: { kcal: 0, sugar: 0, fat: 0, proteine: 0, items: [""] },
-  updateText(input: string) {
-    this.text += input;
-  },
-  increment: function () {
-    this.count++;
+  resetNutritionValues: function () {
+    this.currentNutrtion = {
+      kcal: 0,
+      sugar: 0,
+      fat: 0,
+      proteine: 0,
+      items: [""],
+    };
   },
   //! Currently I'm using a method directly in the respecitve component
   // addToCurrentNutrition: function (

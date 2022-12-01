@@ -4,7 +4,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <div class="main-container">
+  <div>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
@@ -12,9 +12,3 @@ import HelloWorld from "./components/HelloWorld.vue";
     <RouterView />
   </div>
 </template>
-
-<style scoped>
-.main-container {
-  width: inherit;
-}
-</style>

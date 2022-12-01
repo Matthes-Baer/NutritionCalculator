@@ -1,10 +1,10 @@
 <script lang="ts">
-import { store } from "../../store/store";
+import { nutritionStore } from "../../store/store";
 
 export default {
   data() {
     return {
-      store,
+      nutritionStore,
       amount: 0,
     };
   },
@@ -24,15 +24,15 @@ export default {
         return;
       }
 
-      store.currentNutrtion.kcal += kcal;
-      store.currentNutrtion.fat += fat;
-      store.currentNutrtion.sugar += sugar;
-      store.currentNutrtion.proteine += proteine;
+      nutritionStore.currentNutrtion.kcal += kcal;
+      nutritionStore.currentNutrtion.fat += fat;
+      nutritionStore.currentNutrtion.sugar += sugar;
+      nutritionStore.currentNutrtion.proteine += proteine;
 
       this.amount = 0;
 
-      if (!store.currentNutrtion.items.find((e) => e === name)) {
-        store.currentNutrtion.items.push(name);
+      if (!nutritionStore.currentNutrtion.items.find((e) => e === name)) {
+        nutritionStore.currentNutrtion.items.push(name);
       }
     },
   },
@@ -42,20 +42,39 @@ export default {
 };
 </script>
 <template>
-  <div>{{ product.name }}</div>
-  <label>Gramm ({{ amount }})<input type="number" v-model="amount" /></label>
+  <div class="col-md-3">
+    <div class="d-flex flex-column">
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <img class="product-image" :src="product.icon" />
+        <h3>{{ product.name }}</h3>
+      </div>
 
-  <button
-    @click="
-      addToCurrentNutrition(
-        product.values.kcal * amount,
-        product.values.fat * amount,
-        product.values.sugar * amount,
-        product.values.proteine * amount,
-        product.name
-      )
-    "
-  >
-    {{ product.name }} - Click to Add
-  </button>
+      <label class="mb-3">gram: <input type="number" v-model="amount" /></label>
+
+      <button
+        class="add-button mx-auto mb-3"
+        @click="
+          addToCurrentNutrition(
+            product.values.kcal * amount,
+            product.values.fat * amount,
+            product.values.sugar * amount,
+            product.values.proteine * amount,
+            product.name
+          )
+        "
+      >
+        {{ product.name }} - Click to Add
+      </button>
+    </div>
+  </div>
 </template>
+
+<style>
+.product-image {
+  max-width: 75px;
+  max-height: 75px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 0px #252525;
+  margin: 15px;
+}
+</style>
