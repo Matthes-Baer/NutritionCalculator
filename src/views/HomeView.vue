@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from "../components/TheWelcome.vue";
 import NutritionOverview from "../components/nutrition/NutritionOverview.vue";
+import StartInfo from "../components/StartInfo.vue";
 </script>
 
 <template>
-  <!-- <TheWelcome /> -->
+  <StartInfo />
   <NutritionOverview />
 </template>
