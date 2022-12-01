@@ -4,8 +4,6 @@ import NutritionOverview from "../components/nutrition/NutritionOverview.vue";
 </script>
 
 <template>
-  <main>
-    <!-- <TheWelcome /> -->
-    <NutritionOverview />
-  </main>
+  <!-- <TheWelcome /> -->
+  <NutritionOverview />
 </template>

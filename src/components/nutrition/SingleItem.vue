@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       store,
-      amount: { kcal: 0, fat: 0, sugar: 0, proteine: 0 },
+      amount: 0,
     };
   },
   props: ["product"],
@@ -19,15 +19,8 @@ export default {
       proteine: number,
       name: string
     ) {
-      if (
-        !(
-          this.amount.kcal |
-          this.amount.fat |
-          this.amount.sugar |
-          this.amount.proteine
-        )
-      ) {
-        alert("Pick a value for kcal, fat, sugar and/or proteine");
+      if (!this.amount) {
+        alert("Pick a Gramm value");
         return;
       }
 
@@ -36,10 +29,7 @@ export default {
       store.currentNutrtion.sugar += sugar;
       store.currentNutrtion.proteine += proteine;
 
-      this.amount.kcal = 0;
-      this.amount.fat = 0;
-      this.amount.sugar = 0;
-      this.amount.proteine = 0;
+      this.amount = 0;
 
       if (!store.currentNutrtion.items.find((e) => e === name)) {
         store.currentNutrtion.items.push(name);
@@ -53,26 +43,15 @@ export default {
 </script>
 <template>
   <div>{{ product.name }}</div>
-  <label
-    >Kcal ({{ amount.kcal }})<input type="number" v-model="amount.kcal"
-  /></label>
-  <label
-    >Fat ({{ amount.fat }})<input type="number" v-model="amount.fat"
-  /></label>
-  <label
-    >Sugar ({{ amount.sugar }})<input type="number" v-model="amount.sugar"
-  /></label>
-  <label
-    >Kcal ({{ amount.proteine }})<input type="number" v-model="amount.proteine"
-  /></label>
+  <label>Gramm ({{ amount }})<input type="number" v-model="amount" /></label>
 
   <button
     @click="
       addToCurrentNutrition(
-        product.values.kcal * amount.kcal,
-        product.values.fat * amount.fat,
-        product.values.sugar * amount.sugar,
-        product.values.proteine * amount.proteine,
+        product.values.kcal * amount,
+        product.values.fat * amount,
+        product.values.sugar * amount,
+        product.values.proteine * amount,
         product.name
       )
     "
