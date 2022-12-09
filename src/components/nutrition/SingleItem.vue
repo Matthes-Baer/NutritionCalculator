@@ -42,7 +42,7 @@ export default {
 };
 </script>
 <template>
-  <div class="col-md-3">
+  <div class="col-md-3 card">
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-center align-items-center mb-3">
         <img class="product-image" :src="product.icon" />
@@ -75,6 +75,14 @@ export default {
   max-height: 75px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 0px #252525;
+  margin: 15px;
+}
+.card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
   margin: 15px;
 }
 </style>
