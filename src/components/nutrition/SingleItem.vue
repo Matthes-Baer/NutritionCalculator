@@ -6,6 +6,7 @@ export default {
     return {
       nutritionStore,
       amount: 0,
+      borderData: this.product.id % 2 == 0 ? "borderRight" : "borderLeft",
     };
   },
   props: ["product"],
@@ -42,7 +43,7 @@ export default {
 };
 </script>
 <template>
-  <div class="col-md-3 card">
+  <div class="col-md-3 card" :class="borderData">
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-center align-items-center mb-3">
         <img class="product-image" :src="product.icon" />
@@ -77,12 +78,22 @@ export default {
   box-shadow: 2px 2px 2px 0px #252525;
   margin: 15px;
 }
+
+.borderRight {
+  border-right: 1px solid var(--accentColor);
+}
+
+.borderLeft {
+  border-left: 1px solid var(--accentColor);
+}
 .card {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
+  /* backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%); */
+  background-color: transparent;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-top: 1px solid var(--accentColor);
+  border-style: dashed;
   margin: 15px;
+  color: white;
 }
 </style>
