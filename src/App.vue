@@ -12,3 +12,10 @@ import { RouterLink, RouterView } from "vue-router";
     <h1>Bilder runterladen und zu webp format?</h1>
   </div>
 </template>
+
+<style>
+body {
+  --accentColor: rgb(255, 255, 42);
+  background-color: rgb(19, 19, 19);
+}
+</style>

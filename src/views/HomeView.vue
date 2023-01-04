@@ -8,8 +8,4 @@ import StartInfo from "../components/StartInfo.vue";
   <NutritionSectionVue />
 </template>
 
-<style>
-body {
-  background-color: rgba(245, 245, 245, 1);
-}
-</style>
+<style></style>
