@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import NutritionOverview from "../components/nutrition/NutritionOverview.vue";
+import NutritionSectionVue from "@/components/nutrition/NutritionSection.vue";
 import StartInfo from "../components/StartInfo.vue";
 </script>
 
 <template>
   <StartInfo />
-  <NutritionOverview />
+  <NutritionSectionVue />
 </template>
 
 <style>
