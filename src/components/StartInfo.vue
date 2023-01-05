@@ -18,22 +18,19 @@ export default {
       </p>
     </div>
     <div class="half-container">
-      <div class="circle"></div>
-      <h1 class="hover-appear">Bild mit Bezug zu Nahrung?</h1>
+      <div class="square squareLeft">day by day</div>
+      <div class="square squareRight">step by step</div>
+      <div class="square squareHidden">healthy mind</div>
+      <h1 class="hover-appear" style="font-size: 30px">
+        embrace an healthy lifestyle
+      </h1>
     </div>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .underlined {
   text-decoration: underline var(--accentColor);
-}
-
-.circle {
-  width: 50%;
-  height: 50%;
-  border-radius: 25%;
-  border: 1px solid yellow;
 }
 
 .main-container {
@@ -58,34 +55,69 @@ export default {
 }
 
 .half-container h1 {
-  font-size: 100px;
+  font-size: 50px;
   align-self: center;
   text-align: center;
+  transition: all 0.25s;
 }
 
 .half-container p {
-  font-size: 25px;
-}
-
-.line {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 35%;
-  width: 100%;
-  height: 2px;
-  background-color: green;
-  transition: all 1s;
-  transform: rotate(45deg);
-  opacity: 0.25;
+  font-size: 15px;
+  max-width: 75%;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hover-appear {
   opacity: 0;
   transition: all 1s;
+  margin-top: 17.5%;
 }
 
-@media only screen and (max-width: 1000px) {
+.square {
+  width: 50%;
+  height: 150px;
+  border: 1px solid yellow;
+  position: absolute;
+  transition: all 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Left {
+    left: 0;
+    top: 0;
+  }
+  &Right,
+  &Hidden {
+    right: 5%;
+    bottom: 0;
+  }
+
+  &Hidden {
+    opacity: 0;
+    width: 25%;
+    right: 10%;
+  }
+}
+
+.main-container:hover .squareLeft {
+  transform: translateY(100%);
+  border-top-right-radius: 7px;
+  width: 40%;
+}
+
+.main-container:hover .squareRight {
+  transform: translateY(-300px);
+  border-bottom-left-radius: 7px;
+}
+
+.main-container:hover .squareHidden {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1050px) {
   .main-container {
     flex-direction: column;
     align-items: center;
@@ -93,6 +125,18 @@ export default {
 
   .half-container {
     height: auto;
+  }
+
+  .square {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .half-container h1 {
+    font-size: 30px;
+    align-self: center;
+    text-align: center;
   }
 }
 </style>
