@@ -8,8 +8,7 @@ export default {
 <template>
   <div class="d-flex text-center main-container">
     <div class="half-container">
-      <h1>Nutrition Calculator</h1>
-      <span class="line"></span>
+      <h1><span class="underlined">Nutrition</span> Calculator</h1>
       <p>
         This is my first vue.js application and is fully frontend While this
         project mainly serves the purpose of getting familiar with vue.js
@@ -19,20 +18,25 @@ export default {
       </p>
     </div>
     <div class="half-container">
+      <div class="circle"></div>
       <h1 class="hover-appear">Bild mit Bezug zu Nahrung?</h1>
     </div>
   </div>
 </template>
 
 <style>
+.underlined {
+  text-decoration: underline var(--accentColor);
+}
+
+.circle {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 1px solid yellow;
+}
+
 .main-container {
-  background-color: #ffc099;
-  background-image: radial-gradient(
-      at 18% 86%,
-      hsla(108, 73%, 76%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 85% 7%, hsla(311, 92%, 66%, 1) 0px, transparent 50%);
   overflow: hidden;
 }
 

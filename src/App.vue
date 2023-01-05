@@ -17,5 +17,6 @@ import { RouterLink, RouterView } from "vue-router";
 body {
   --accentColor: rgb(255, 255, 42);
   background-color: rgb(19, 19, 19);
+  color: white;
 }
 </style>

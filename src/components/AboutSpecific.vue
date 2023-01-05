@@ -1,6 +1,4 @@
 <script lang="ts">
-import { store } from "../store/store";
-
 export default {
   data() {
     return {
