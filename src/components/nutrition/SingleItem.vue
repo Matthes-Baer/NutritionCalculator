@@ -46,7 +46,6 @@ export default {
   <div class="col-md-3 card" :class="borderData">
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-center align-items-center mb-3">
-        <img class="product-image" :src="product.icon" />
         <h3>{{ product.name }}</h3>
       </div>
 

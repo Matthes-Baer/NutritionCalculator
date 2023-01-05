@@ -32,7 +32,7 @@ export default {
 .circle {
   width: 50%;
   height: 50%;
-  border-radius: 50%;
+  border-radius: 25%;
   border: 1px solid yellow;
 }
 

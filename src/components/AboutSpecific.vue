@@ -1,8 +1,10 @@
 <script lang="ts">
+// import { store } from "../store/store";
+
 export default {
   data() {
     return {
-      store,
+      // store,
       enterText: "",
     };
   },
@@ -14,7 +16,7 @@ export default {
 
 <template>
   <!-- <div>{{ data }}</div> -->
-  <h2>{{ store.count }}</h2>
+  <!-- <h2>{{ store.count }}</h2>
   <button @click="store.increment()">count += 1 (with store method)</button>
   <button @click="store.count++">
     count += 1 (directly adjusting the state in the component without method)
@@ -23,5 +25,6 @@ export default {
   <h3>{{ enterText }}</h3>
 
   {{ store.text }}
-  <h3>{{ data }}</h3>
+  <h3>{{ data }}</h3> -->
+  Test
 </template>
