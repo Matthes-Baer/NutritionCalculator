@@ -26,6 +26,10 @@ export default {
       </h1>
     </div>
   </div>
+  <div style="display: flex; align-items: flex-end">
+    <div class="bottomLine"></div>
+    <div class="bottomLineText">let's go</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -115,6 +119,39 @@ export default {
 
 .main-container:hover .squareHidden {
   opacity: 1;
+}
+
+.bottomLine {
+  width: 0;
+  height: 20px;
+  margin-top: 5%;
+  background-color: var(--accentColor);
+  animation: bottomLineAnimation 4s ease-in-out 2s forwards;
+
+  &Text {
+    opacity: 0;
+    height: 20px;
+    margin-left: 2.5%;
+    animation: bottomLineTextAnimation 1s ease-in-out 6s forwards;
+  }
+}
+
+@keyframes bottomLineAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes bottomLineTextAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
