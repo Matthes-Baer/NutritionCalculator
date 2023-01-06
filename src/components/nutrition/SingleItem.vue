@@ -1,5 +1,6 @@
 <script lang="ts">
 import { nutritionStore } from "../../store/store";
+import CustomButton from "../ui/CustomButton.vue";
 
 export default {
   data() {
@@ -10,7 +11,7 @@ export default {
     };
   },
   props: ["product"],
-  components: {},
+  components: { CustomButton },
   // Functions have to be implemented as methods - There is also the opportunity to add such methods directly in the corresponding store.
   methods: {
     addToCurrentNutrition: function (
@@ -52,12 +53,13 @@ export default {
       <div class="d-flex justify-content-center align-items-center mb-3">
         <h3>{{ product.name }}</h3>
       </div>
-
-      <label class="mb-3">gram: <input type="number" v-model="amount" /></label>
-
-      <button
-        class="add-button mx-auto mb-3"
-        @click="
+      <div class="form-group">
+        <span>gram</span>
+        <input class="form-field" type="number" v-model="amount" />
+      </div>
+      <CustomButton
+        :name="product.name"
+        @clicked="
           addToCurrentNutrition(
             (product.values.kcal / 100) * amount,
             (product.values.fat / 100) * amount,
@@ -66,14 +68,14 @@ export default {
             product.name
           )
         "
-      >
-        {{ product.name }} - Click to Add
-      </button>
+      />
     </div>
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "../../style/customInput.scss";
+
 .product-image {
   max-width: 75px;
   max-height: 75px;
