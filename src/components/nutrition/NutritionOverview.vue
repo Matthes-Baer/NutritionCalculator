@@ -2,7 +2,6 @@
 import { nutritionStore } from "../../store/store";
 import items from "../../data/items";
 import SingleItem from "./SingleItem.vue";
-import NutritionResult from "./NutritionResult.vue";
 
 export default {
   data() {
@@ -14,7 +13,6 @@ export default {
   props: [],
   components: {
     SingleItem,
-    NutritionResult,
   },
   methods: {},
   mounted() {},
@@ -23,7 +21,7 @@ export default {
 
 <template>
   <!-- <div v-for="item in items" :key="item.id">{{ item.name }}</div> -->
-  <div class="row text-center">
+  <div class="row justify-content-evenly text-center mt-5">
     <!-- To loop through data with a component the loop has to be integrated in the component while the items within the loop have to be integrated as props in the respective component - v-bind: is identical to : -->
     <SingleItem
       v-for="item in nutritionStore.itemsData"
@@ -45,5 +43,4 @@ export default {
     <h3>Es sollte von Kommazahlen abgewichen werden.</h3>
     <h3>Card-Design erstellen (background colors)</h3>
   </div> -->
-  <NutritionResult />
 </template>

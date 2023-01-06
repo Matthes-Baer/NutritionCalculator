@@ -25,5 +25,6 @@ body {
   background-color: rgb(19, 19, 19);
   color: white;
   font-family: "PressStart2P", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 </style>

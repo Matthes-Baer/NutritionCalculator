@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="row text-center">
+  <div class="row text-center mt-5">
     <h2 class="col-md-12">Current Nutrition values</h2>
     <div class="col-md-3">
       <h4>Kcal</h4>
