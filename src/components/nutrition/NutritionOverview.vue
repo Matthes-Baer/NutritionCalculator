@@ -35,7 +35,7 @@ export default {
   <button @click="nutritionStore.resetNutritionValues()">
     Reset all nutrition values
   </button>
-
+  <!-- 
   <div>
     Derzeit kann einem bestimmten Food-Item im Nachhinein nicht anerkannt
     werden, wie viel Nährwerte diesem Item zuzuweisen sind. Um eine solche Logik
@@ -44,6 +44,6 @@ export default {
     zuweist
     <h3>Es sollte von Kommazahlen abgewichen werden.</h3>
     <h3>Card-Design erstellen (background colors)</h3>
-  </div>
+  </div> -->
   <NutritionResult />
 </template>

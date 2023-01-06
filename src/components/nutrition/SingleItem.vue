@@ -16,8 +16,8 @@ export default {
     addToCurrentNutrition: function (
       kcal: number,
       fat: number,
-      sugar: number,
-      proteine: number,
+      carbs: number,
+      protein: number,
       name: string
     ) {
       if (!this.amount) {
@@ -25,10 +25,14 @@ export default {
         return;
       }
 
-      nutritionStore.currentNutrtion.kcal += kcal;
-      nutritionStore.currentNutrtion.fat += fat;
-      nutritionStore.currentNutrtion.sugar += sugar;
-      nutritionStore.currentNutrtion.proteine += proteine;
+      nutritionStore.currentNutrtion.kcal +=
+        kcal.toString().length > 3 ? +kcal.toFixed(2) : kcal;
+      nutritionStore.currentNutrtion.fat +=
+        fat.toString().length > 3 ? +fat.toFixed(2) : fat;
+      nutritionStore.currentNutrtion.carbs +=
+        carbs.toString().length > 3 ? +carbs.toFixed(2) : carbs;
+      nutritionStore.currentNutrtion.protein +=
+        protein.toString().length > 3 ? +protein.toFixed(2) : protein;
 
       this.amount = 0;
 
@@ -55,10 +59,10 @@ export default {
         class="add-button mx-auto mb-3"
         @click="
           addToCurrentNutrition(
-            product.values.kcal * amount,
-            product.values.fat * amount,
-            product.values.sugar * amount,
-            product.values.proteine * amount,
+            (product.values.kcal / 100) * amount,
+            (product.values.fat / 100) * amount,
+            (product.values.carbs / 100) * amount,
+            (product.values.protein / 100) * amount,
             product.name
           )
         "

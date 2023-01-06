@@ -1,14 +1,11 @@
-const DATA: {
-  id: number;
-  name: string;
-  icon: string;
-  values: { kcal: number; fat: number; sugar: number; proteine: number };
-}[] = [
+import type { nutritionData } from "@/utils/interfaces-types";
+
+const DATA: nutritionData[] = [
   {
     id: 1,
-    name: "Cheese",
-    icon: "https://www.cheeselinks.com.au/wp-content/uploads/2017/09/Dollarphotoclub_53674521.jpg",
-    values: { kcal: 2, fat: 0.2, sugar: 0.01, proteine: 0.15 },
+    name: "Chicken",
+    values: { kcal: 190, fat: 7.4, carbs: 0, protein: 28.9 },
+    info: "No skin",
   },
 ];
 

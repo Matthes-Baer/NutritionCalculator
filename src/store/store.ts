@@ -4,13 +4,13 @@ import items from "../data/items";
 export const nutritionStore = reactive({
   // Can be put in the store or as a variable in the respective component.
   itemsData: items,
-  currentNutrtion: { kcal: 0, sugar: 0, fat: 0, proteine: 0, items: [""] },
+  currentNutrtion: { kcal: 0, carbs: 0, fat: 0, protein: 0, items: [""] },
   resetNutritionValues: function () {
     this.currentNutrtion = {
       kcal: 0,
-      sugar: 0,
+      carbs: 0,
       fat: 0,
-      proteine: 0,
+      protein: 0,
       items: [""],
     };
   },
