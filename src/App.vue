@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
+
+// potential images: https://www.vexels.com/merch/designs/flat-people/
 </script>
 
 <template>
@@ -9,7 +11,6 @@ import { RouterLink, RouterView } from "vue-router";
       <RouterLink to="/about">About</RouterLink>
     </nav>
     <RouterView />
-    <h1>Bilder runterladen und zu webp format?</h1>
   </div>
 </template>
 
