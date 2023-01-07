@@ -15,22 +15,24 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style>
 :root {
-  --input-color: #99a3ba;
+  --bodyBackgroundColor: rgb(19, 19, 19);
+  --darkFontColor: rgb(19, 19, 19);
+
+  --input-color: black;
   --input-border: #cdd9ed;
   --input-background: #fff;
   --input-placeholder: #cbd1dc;
+  --accentColor: rgb(255, 255, 42);
 
-  --input-border-focus: #275efe;
+  --input-border-focus: #252525;
 
-  --group-color: var(--input-color);
+  --group-color: var(--darkFontColor);
   --group-border: var(--input-border);
   --group-background: #eef4ff;
 
-  --group-color-focus: #fff;
+  --group-color-focus: black;
   --group-border-focus: var(--input-border-focus);
-  --group-background-focus: #678efe;
-
-  --accentColor: rgb(255, 255, 42);
+  --group-background-focus: var(--accentColor);
 }
 
 @font-face {
@@ -40,7 +42,7 @@ import { RouterLink, RouterView } from "vue-router";
 }
 
 body {
-  background-color: rgb(19, 19, 19);
+  background-color: var(--bodyBackgroundColor);
   color: white;
   font-family: "PressStart2P", Arial, Helvetica, sans-serif;
   overflow-x: hidden;

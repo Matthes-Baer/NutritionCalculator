@@ -1,6 +1,10 @@
 <script lang="ts">
 export default {
-  props: ["name"],
+  props: {
+    name: String,
+    icon: String,
+    additionalData: String,
+  },
 
   methods: {
     // This method serves the purpose to emit a message to the parent component with "clicked".
@@ -12,8 +16,16 @@ export default {
 };
 </script>
 <template>
-  <div @click="clicked">
-    <i class="fa-solid fa-plus"></i>
-    <p>{{ name }}</p>
+  <div @click="clicked" class="d-flex container align-items-center">
+    <i :class="icon" class="me-3" style="flex: 1"></i>
+    <div style="flex: 4; font-size: small">
+      {{ name }}{{ additionalData && additionalData }}
+    </div>
   </div>
 </template>
+
+<style>
+.container {
+  width: 100%;
+}
+</style>

@@ -22,7 +22,7 @@ export default {
       name: string
     ) {
       if (!this.amount) {
-        alert("Pick a Gramm value");
+        alert("Pick a valid gram value");
         return;
       }
 
@@ -53,22 +53,31 @@ export default {
       <div class="d-flex justify-content-center align-items-center mb-3">
         <h3>{{ product.name }}</h3>
       </div>
-      <div class="form-group">
-        <span>gram</span>
-        <input class="form-field" type="number" v-model="amount" />
+      <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center form-group me-4" style="flex: 1">
+          <span>gram</span>
+          <input class="form-field" type="number" v-model="amount" min="0" />
+        </div>
+        <div
+          style="flex: 1.5; border: 1px solid red"
+          class="d-flex align-items-center"
+        >
+          <CustomButton
+            name="Add: "
+            :additionalData="product.name"
+            icon="fa-solid fa-plus"
+            @clicked="
+              addToCurrentNutrition(
+                (product.values.kcal / 100) * amount,
+                (product.values.fat / 100) * amount,
+                (product.values.carbs / 100) * amount,
+                (product.values.protein / 100) * amount,
+                product.name
+              )
+            "
+          />
+        </div>
       </div>
-      <CustomButton
-        :name="product.name"
-        @clicked="
-          addToCurrentNutrition(
-            (product.values.kcal / 100) * amount,
-            (product.values.fat / 100) * amount,
-            (product.values.carbs / 100) * amount,
-            (product.values.protein / 100) * amount,
-            product.name
-          )
-        "
-      />
     </div>
   </div>
 </template>
