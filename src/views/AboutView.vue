@@ -3,6 +3,24 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <div>
+      TODO:
+      <ul>
+        <li>
+          items data erweitern (Bilder, mehr Informationen etc.) für die details
+          page
+        </li>
+        <li>Details Page bearbeiten</li>
+        <li>HomeView vervollständigen bzgl. Styling</li>
+        <li>About Page etwas erweitern mit Informationen zum Projekt</li>
+        <li>Header anpassen bzlg. Styling - bei App.vue</li>
+        <li>
+          potential images: https://www.vexels.com/merch/designs/flat-people/
+        </li>
+        <li>responsive design optimieren überall</li>
+        <li>...?</li>
+      </ul>
+    </div>
   </div>
 </template>
 
