@@ -42,9 +42,7 @@ export default {
       }
     },
   },
-  mounted() {
-    console.log(this.product);
-  },
+  mounted() {},
 };
 </script>
 <template>

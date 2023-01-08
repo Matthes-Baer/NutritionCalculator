@@ -1,13 +1,13 @@
 <script lang="ts">
 import { nutritionStore } from "../../store/store";
-import items from "../../data/items";
+import { DATA } from "../../data/items";
 import SingleItem from "./SingleItem.vue";
 
 export default {
   data() {
     return {
       nutritionStore,
-      items: items,
+      items: DATA,
     };
   },
   props: [],
@@ -27,6 +27,12 @@ export default {
       v-for="item in nutritionStore.itemsData"
       :key="item.id"
       v-bind:product="item"
+      @click="
+        $router.push({
+          name: 'detailPage',
+          params: { itemID: item.id },
+        })
+      "
     />
   </div>
 

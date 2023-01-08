@@ -1,7 +1,7 @@
 import type { nutritionData } from "@/utils/interfaces-types";
 
 //? used YAZIO -> https://www.yazio.com/de
-const DATA: nutritionData[] = [
+export const DATA: nutritionData[] = [
   {
     id: 1,
     name: "Chicken",
@@ -40,4 +40,7 @@ const DATA: nutritionData[] = [
   },
 ];
 
-export default DATA;
+export const findSpecificItem = (id: number) => {
+  const item = DATA.find((item) => item.id === id);
+  return item;
+};

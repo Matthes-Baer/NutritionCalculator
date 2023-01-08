@@ -2,7 +2,7 @@
 export default {};
 </script>
 <template>
-  <div class="main-container row">
+  <div class="main-container row mt-5">
     <div class="col-md-10"></div>
     <div class="col-xl-2 d-flex flex-column justify-content-evenly grid-part">
       <div class="d-flex align-items-center">
@@ -35,8 +35,6 @@ export default {};
 .main-container {
   width: 100%;
   height: 200px;
-
-  border: 1px solid red;
 }
 
 .icon {
@@ -51,8 +49,5 @@ export default {};
   &-part {
     height: 100%;
   }
-}
-
-@media only screen and (max-width: 768px) {
 }
 </style>
