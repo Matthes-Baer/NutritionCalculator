@@ -48,7 +48,7 @@ export default {
 <template>
   <div class="col-md-3 card" :class="borderData">
     <div class="d-flex flex-column">
-      <div class="d-flex justify-content-center align-items-center mb-3">
+      <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>{{ product.name }}</h3>
 
         <div
@@ -58,7 +58,7 @@ export default {
               params: { itemID: product.id },
             })
           "
-          class="d-flex align-items-center"
+          class="d-flex align-items-center info-circle"
         >
           <i class="fa-sharp fa-solid fa-circle-info"></i>
         </div>
@@ -119,5 +119,16 @@ export default {
   border-style: dashed;
   margin: 15px;
   color: white;
+}
+
+.info {
+  &-circle {
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  &-circle:hover.info-circle {
+    opacity: 0.5;
+  }
 }
 </style>
