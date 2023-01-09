@@ -17,19 +17,19 @@ import { RouterLink, RouterView } from "vue-router";
   --bodyBackgroundColor: rgb(19, 19, 19);
   --darkFontColor: rgb(19, 19, 19);
 
-  --input-color: black;
+  --input-color: var(--darkFontColor);
   --input-border: #cdd9ed;
   --input-background: #fff;
   --input-placeholder: #cbd1dc;
   --accentColor: rgb(255, 255, 42);
 
-  --input-border-focus: #252525;
+  --input-border-focus: var(--darkFontColor);
 
   --group-color: var(--darkFontColor);
   --group-border: var(--input-border);
   --group-background: #eef4ff;
 
-  --group-color-focus: black;
+  --group-color-focus: var(--darkFontColor);
   --group-border-focus: var(--input-border-focus);
   --group-background-focus: var(--accentColor);
 }

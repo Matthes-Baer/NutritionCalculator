@@ -1,5 +1,6 @@
 <script lang="ts">
 import { nutritionStore } from "../../store/store";
+import CustomButton from "../ui/CustomButton.vue";
 
 export default {
   data() {
@@ -7,15 +8,23 @@ export default {
       nutritionStore,
     };
   },
+  components: { CustomButton },
 };
 </script>
 
 <template>
-  <div class="row text-center mt-5">
-    <h2 class="col-md-12">Current Nutrition values</h2>
-    <button @click="nutritionStore.resetNutritionValues()">
-      Reset all nutrition values
-    </button>
+  <div class="d-flex justify-content-center mt-5">
+    <h2 class="heading2">Current Nutrition values</h2>
+    <div class="custom-button-container ms-5">
+      <CustomButton
+        @clicked="nutritionStore.resetNutritionValues()"
+        name="Reset"
+        icon="fa-solid fa-backward"
+      />
+    </div>
+  </div>
+
+  <div class="row text-center mt-3">
     <div class="col-md-3">
       <h4>Kcal</h4>
       <p>
@@ -67,3 +76,23 @@ export default {
     </div>
   </div>
 </template>
+
+<style lang="scss">
+.custom-button {
+  &-container {
+    border: 1px solid var(--accentColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  &-container:hover {
+    background-color: var(--accentColor);
+    color: var(--darkFontColor);
+  }
+}
+</style>
