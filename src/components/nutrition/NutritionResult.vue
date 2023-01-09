@@ -13,6 +13,9 @@ export default {
 <template>
   <div class="row text-center mt-5">
     <h2 class="col-md-12">Current Nutrition values</h2>
+    <button @click="nutritionStore.resetNutritionValues()">
+      Reset all nutrition values
+    </button>
     <div class="col-md-3">
       <h4>Kcal</h4>
       <p>

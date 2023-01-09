@@ -27,18 +27,9 @@ export default {
       v-for="item in nutritionStore.itemsData"
       :key="item.id"
       v-bind:product="item"
-      @click="
-        $router.push({
-          name: 'detailPage',
-          params: { itemID: item.id },
-        })
-      "
     />
   </div>
 
-  <button @click="nutritionStore.resetNutritionValues()">
-    Reset all nutrition values
-  </button>
   <!-- 
   <div>
     Derzeit kann einem bestimmten Food-Item im Nachhinein nicht anerkannt

@@ -50,6 +50,18 @@ export default {
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-center align-items-center mb-3">
         <h3>{{ product.name }}</h3>
+
+        <div
+          @click="
+            $router.push({
+              name: 'detailPage',
+              params: { itemID: product.id },
+            })
+          "
+          class="d-flex align-items-center"
+        >
+          <i class="fa-sharp fa-solid fa-circle-info"></i>
+        </div>
       </div>
       <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center form-group me-4" style="flex: 1">
