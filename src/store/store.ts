@@ -5,7 +5,7 @@ export const nutritionStore = reactive({
   // Can be put in the store or as a variable in the respective component.
   itemsData: DATA,
   currentNutrtion: { kcal: 0, carbs: 0, fat: 0, protein: 0, items: [""] },
-  inputError: false,
+  error: { boolean: false, message: "" },
   resetNutritionValues: function () {
     this.currentNutrtion = {
       kcal: 0,

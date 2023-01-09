@@ -20,9 +20,10 @@ export default {
       protein: number,
       name: string
     ) {
-      nutritionStore.inputError = false;
+      nutritionStore.error = { boolean: false, message: "" };
       if (!this.amount) {
-        nutritionStore.inputError = true;
+        nutritionStore.error.boolean = true;
+        nutritionStore.error.message = "No gram value picked";
         return;
       }
 
@@ -42,7 +43,9 @@ export default {
       }
     },
   },
-  mounted() {},
+  mounted() {
+    nutritionStore.error = { boolean: false, message: "" };
+  },
 };
 </script>
 <template>
@@ -68,20 +71,19 @@ export default {
           <span>gram</span>
           <input class="form-field" type="number" v-model="amount" min="0" />
         </div>
-        <div class="d-flex align-items-center custom-button-container">
-          <CustomButton
-            name="Add"
-            icon="fa-solid fa-plus"
-            @clicked="
-              addToCurrentNutrition(
-                (product.values.kcal / 100) * amount,
-                (product.values.fat / 100) * amount,
-                (product.values.carbs / 100) * amount,
-                (product.values.protein / 100) * amount,
-                product.name
-              )
-            "
-          />
+        <div
+          class="d-flex align-items-center custom-button-container"
+          @click="
+            addToCurrentNutrition(
+              (product.values.kcal / 100) * amount,
+              (product.values.fat / 100) * amount,
+              (product.values.carbs / 100) * amount,
+              (product.values.protein / 100) * amount,
+              product.name
+            )
+          "
+        >
+          <CustomButton name="Add" icon="fa-solid fa-plus" />
         </div>
       </div>
     </div>
