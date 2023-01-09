@@ -1,5 +1,5 @@
 <script lang="ts">
-import { nutritionStore } from "../../store/store";
+import { nutritionStore } from "@/store/store";
 import CustomButton from "../ui/CustomButton.vue";
 
 export default {
@@ -7,7 +7,6 @@ export default {
     return {
       nutritionStore,
       amount: 0,
-      borderData: this.product.id % 2 == 0 ? "borderRight" : "borderLeft",
     };
   },
   props: ["product"],
@@ -21,8 +20,9 @@ export default {
       protein: number,
       name: string
     ) {
+      nutritionStore.inputError = false;
       if (!this.amount) {
-        alert("Pick a valid gram value");
+        nutritionStore.inputError = true;
         return;
       }
 
@@ -46,7 +46,7 @@ export default {
 };
 </script>
 <template>
-  <div class="col-md-3 card" :class="borderData">
+  <div class="col-md-3 card">
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>{{ product.name }}</h3>
@@ -68,13 +68,9 @@ export default {
           <span>gram</span>
           <input class="form-field" type="number" v-model="amount" min="0" />
         </div>
-        <div
-          style="flex: 1.5; border: 1px solid red"
-          class="d-flex align-items-center"
-        >
+        <div class="d-flex align-items-center custom-button-container">
           <CustomButton
-            name="Add: "
-            :additionalData="product.name"
+            name="Add"
             icon="fa-solid fa-plus"
             @clicked="
               addToCurrentNutrition(
@@ -92,7 +88,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "../../style/customInput.scss";
 
 .product-image {
@@ -103,19 +99,11 @@ export default {
   margin: 15px;
 }
 
-.borderRight {
-  border-right: 1px solid var(--accentColor);
-}
-
-.borderLeft {
-  border-left: 1px solid var(--accentColor);
-}
 .card {
   /* backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%); */
   background-color: transparent;
   border-radius: 12px;
-  border-top: 1px solid var(--accentColor);
   border-style: dashed;
   margin: 15px;
   color: white;
@@ -129,6 +117,26 @@ export default {
 
   &-circle:hover.info-circle {
     opacity: 0.5;
+  }
+}
+
+.custom-button {
+  &-container {
+    border: 1px solid var(--accentColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+  &-container:hover {
+    background-color: var(--accentColor);
+    color: var(--darkFontColor);
+  }
+
+  &-container:active {
+    transform: translateY(5px);
   }
 }
 </style>

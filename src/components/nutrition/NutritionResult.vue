@@ -46,7 +46,7 @@ export default {
       </p>
     </div>
     <div class="col-md-3">
-      <h4>Sugar</h4>
+      <h4>Carbs</h4>
       <p>
         {{
           nutritionStore.currentNutrtion.carbs.toString().length > 3
@@ -56,7 +56,7 @@ export default {
       </p>
     </div>
     <div class="col-md-3">
-      <h4>Proteine</h4>
+      <h4>Protein</h4>
       <p>
         {{
           nutritionStore.currentNutrtion.protein.toString().length > 3
@@ -77,7 +77,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .custom-button {
   &-container {
     border: 1px solid var(--accentColor);
@@ -93,6 +93,10 @@ export default {
   &-container:hover {
     background-color: var(--accentColor);
     color: var(--darkFontColor);
+  }
+
+  &-container:active {
+    transform: translateY(5px);
   }
 }
 </style>
