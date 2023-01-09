@@ -18,9 +18,7 @@
           potential images: https://www.vexels.com/merch/designs/flat-people/
         </li>
         <li>responsive design optimieren überall</li>
-        <li>
-          Error Message statt alert verwenden bei Gramm-Angabe (siehe ui folder)
-        </li>
+        <li>Error Message Styling anpassen (ErrorMessage.vue)</li>
         <li>...?</li>
       </ul>
     </div>

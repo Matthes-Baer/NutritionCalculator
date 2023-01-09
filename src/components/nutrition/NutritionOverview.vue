@@ -27,6 +27,7 @@ export default {
       v-for="item in nutritionStore.itemsData"
       :key="item.id"
       v-bind:product="item"
+      data-aos="fade-up"
     />
   </div>
 

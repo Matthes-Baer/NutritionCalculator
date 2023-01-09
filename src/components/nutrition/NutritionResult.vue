@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="d-flex justify-content-center mt-5">
+  <div class="d-flex justify-content-center mt-5" data-aos="fade-up">
     <h2 class="heading2">Current Nutrition values</h2>
     <div class="custom-button-container ms-5">
       <CustomButton
@@ -24,7 +24,7 @@ export default {
     </div>
   </div>
 
-  <div class="row text-center mt-3">
+  <div class="row text-center mt-3" data-aos="fade-up">
     <div class="col-md-3">
       <h4>Kcal</h4>
       <p>
@@ -65,11 +65,12 @@ export default {
         }}
       </p>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12" data-aos="fade-up">
       <h4>Included food items</h4>
       <p
         v-for="(item, index) in nutritionStore.currentNutrtion.items"
         :key="index"
+        data-aos="fade-up"
       >
         {{ item }}
       </p>
