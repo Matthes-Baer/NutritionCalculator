@@ -10,16 +10,16 @@
   font-family: inherit;
   border-radius: 6px;
   -webkit-appearance: none;
-  color: var(--input-color);
-  border: 1px solid var(--input-border);
-  background: var(--input-background);
+  color: white;
+  border: 1px solid var(--accentColor);
+  background: transparent;
   transition: border 0.3s ease;
   &::placeholder {
-    color: var(--input-placeholder);
+    color: white;
   }
   &:focus {
     outline: none;
-    border-color: var(--input-border-focus);
+    border-color: var(--accentColor);
   }
 }
 
@@ -57,9 +57,9 @@
     padding: 8px 12px;
     font-size: 14px;
     line-height: 25px;
-    color: var(--group-color);
-    background: var(--group-background);
-    border: 1px solid var(--group-border);
+    color: white;
+    background: transparent;
+    border: 1px solid var(--accentColor);
     transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
   }
   &:focus-within {
