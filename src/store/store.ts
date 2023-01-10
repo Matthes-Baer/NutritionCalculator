@@ -1,9 +1,9 @@
 import { reactive } from "vue";
-import { DATA } from "../data/items";
+import { SORTED_DATA } from "../data/items";
 
 export const nutritionStore = reactive({
   // Can be put in the store or as a variable in the respective component.
-  itemsData: DATA,
+  itemsData: SORTED_DATA(),
   currentNutrtion: { kcal: 0, carbs: 0, fat: 0, protein: 0, items: [""] },
   error: { boolean: false, message: "" },
   resetNutritionValues: function () {

@@ -49,7 +49,7 @@ export default {
 };
 </script>
 <template>
-  <div class="col-md-3 card">
+  <div class="col-lg-3 card">
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>{{ product.name }}</h3>

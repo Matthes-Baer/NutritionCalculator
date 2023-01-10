@@ -1,13 +1,11 @@
 <script lang="ts">
 import { nutritionStore } from "../../store/store";
-import { DATA } from "../../data/items";
 import SingleItem from "./SingleItem.vue";
 
 export default {
   data() {
     return {
       nutritionStore,
-      items: DATA,
     };
   },
   props: [],

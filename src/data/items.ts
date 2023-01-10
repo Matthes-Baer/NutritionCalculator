@@ -44,3 +44,15 @@ export const findSpecificItem = (id: number) => {
   const item = DATA.find((item) => item.id === id);
   return item;
 };
+
+export const SORTED_DATA = () => {
+  const data = [...DATA].sort((a, b) => {
+    const a_letter = a.name.toLowerCase();
+    const b_letter = b.name.toLowerCase();
+
+    if (a_letter < b_letter) return -1;
+    if (a_letter > b_letter) return 1;
+    return 0;
+  });
+  return data;
+};

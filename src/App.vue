@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
 import HeaderComp from "./components/HeaderComp.vue";
+import { SORTED_DATA } from "./data/items";
+SORTED_DATA();
 </script>
 
 <template>
