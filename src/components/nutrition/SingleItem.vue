@@ -49,7 +49,7 @@ export default {
 };
 </script>
 <template>
-  <div class="col-lg-3 card">
+  <div class="col-lg-4 card">
     <div class="d-flex flex-column">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>{{ product.name }}</h3>
@@ -105,10 +105,11 @@ export default {
   /* backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%); */
   background-color: transparent;
-  border-radius: 12px;
   border-style: dashed;
   margin: 15px;
   color: white;
+  padding: 15px;
+  box-shadow: 5px 5px 0px 0px var(--accentColor);
 }
 
 .info {
