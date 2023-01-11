@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DetailPageItem from "@/components/nutrition/DetailPageItem.vue";
+import DetailPageItem from "@/components/nutrition/Details/DetailPageItem.vue";
 </script>
 
 <template><DetailPageItem /></template>

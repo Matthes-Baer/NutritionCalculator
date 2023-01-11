@@ -1,7 +1,7 @@
 <script lang="ts">
 import router from "@/router";
 import { findSpecificItem } from "@/data/items";
-import DetailsItemNutrition from "./Details/DetailsItemNutrition.vue";
+import DetailsItemNutrition from "./DetailsItemNutrition.vue";
 
 export default {
   data() {
@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     getImageUrl: (name: string) => {
-      return new URL(`../../assets/images/${name}`, import.meta.url).href;
+      return new URL(`../../../assets/images/${name}`, import.meta.url).href;
     },
   },
   components: { DetailsItemNutrition },
@@ -28,9 +28,7 @@ export default {
     <div class="col-lg-12">
       <div class="d-flex align-items-center">
         <div>Name:</div>
-        <div>
-          {{ specificItem?.name }}
-        </div>
+        <div>{{ specificItem?.name }} ({{ specificItem?.info }})</div>
       </div>
       <div>
         <div>Nutrition Values (per 100g)</div>
