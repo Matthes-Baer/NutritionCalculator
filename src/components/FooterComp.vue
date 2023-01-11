@@ -2,29 +2,23 @@
 export default {};
 </script>
 <template>
-  <div class="main-container row mt-5">
-    <div class="col-md-10"></div>
-    <div class="col-xl-2 d-flex flex-column justify-content-evenly grid-part">
-      <div class="d-flex align-items-center">
-        <i class="fa-brands fa-linkedin icon"></i>
-        <div class="icon-text">linkedIn</div>
-      </div>
-
-      <div class="d-flex align-items-center">
-        <i class="fa-solid fa-newspaper icon"></i>
-        <div class="icon-text">freeCodeCamp</div>
-      </div>
-
-      <div class="d-flex align-items-center">
-        <i class="fa-brands fa-github icon"></i>
-        <div class="icon-text">GitHub</div>
-      </div>
-
-      <div class="d-flex align-items-center">
-        <i class="fa-solid fa-copyright me-3"></i>
-        <div class="icon-text">All rights reserved.</div>
-      </div>
+  <div class="main-container d-flex justify-content-center align-items-end">
+    <div class="d-flex align-items-center me-3">
+      <i class="fa-brands fa-linkedin icon"></i>
     </div>
+
+    <div class="d-flex align-items-center me-3">
+      <i class="fa-solid fa-newspaper icon"></i>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <i class="fa-brands fa-github icon"></i>
+    </div>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center mt-2">
+    <i class="fa-solid fa-copyright me-3"></i>
+    <div class="icon-text">All rights reserved.</div>
   </div>
 </template>
 
@@ -38,10 +32,9 @@ export default {};
 }
 
 .icon {
-  font-size: 50px;
-  margin-right: 5%;
+  font-size: 20px;
   &-text {
-    font-size: 10px;
+    font-size: 8.5px;
   }
 }
 
