@@ -10,7 +10,7 @@
           items data erweitern (Bilder, mehr Informationen etc.) für die details
           page
         </li>
-        <li>Details Page bearbeiten</li>
+        <li>Details Page bearbeiten - Bilder anpassen</li>
         <li>HomeView vervollständigen bzgl. Styling</li>
         <li>About Page etwas erweitern mit Informationen zum Projekt</li>
         <li>
@@ -19,6 +19,7 @@
         <li>responsive design optimieren überall</li>
         <li>AOS scrolling ggf. weiter hinzufügen?</li>
         <li>AOS npm install wieder entfernen (läuft jetzt über CDN)?</li>
+        <li>Wird der deploy bei Vercel aktualisiert?</li>
         <li>...?</li>
       </ul>
     </div>
