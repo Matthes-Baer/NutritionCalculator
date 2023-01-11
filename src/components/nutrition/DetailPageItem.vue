@@ -10,7 +10,16 @@ export default {
       ),
     };
   },
+  methods: {
+    getImageUrl: (name: string) => {
+      return new URL(`../../assets/images/${name}`, import.meta.url).href;
+    },
+  },
 };
 </script>
 
-<template>{{ specificItem }}</template>
+<template>
+  <div v-if="specificItem?.image">
+    <img :src="getImageUrl(specificItem.image)" />
+  </div>
+</template>

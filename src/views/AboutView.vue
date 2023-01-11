@@ -13,12 +13,10 @@
         <li>Details Page bearbeiten</li>
         <li>HomeView vervollständigen bzgl. Styling</li>
         <li>About Page etwas erweitern mit Informationen zum Projekt</li>
-        <li>Header anpassen bzlg. Styling - bei App.vue</li>
         <li>
           potential images: https://www.vexels.com/merch/designs/flat-people/
         </li>
         <li>responsive design optimieren überall</li>
-        <li>Error Message Styling anpassen (ErrorMessage.vue)</li>
         <li>AOS scrolling ggf. weiter hinzufügen?</li>
         <li>AOS npm install wieder entfernen (läuft jetzt über CDN)?</li>
         <li>...?</li>
