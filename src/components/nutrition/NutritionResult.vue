@@ -1,6 +1,7 @@
 <script lang="ts">
 import { nutritionStore } from "@/store/store";
 import CustomButton from "../ui/CustomButton.vue";
+import type { nutritionData } from "@/utils/interfaces-types";
 
 export default {
   data() {
@@ -70,8 +71,9 @@ export default {
         v-for="(item, index) in nutritionStore.currentNutrition.items"
         :key="index"
         data-aos="fade-up"
+        class="d-flex justify-content-center align-items-center"
       >
-        <p>{{ item.itemName }}</p>
+        <div>{{ item.itemName }}</div>
         <div v-if="!item.customAdd && item.itemName">
           <div
             @click="
@@ -79,12 +81,12 @@ export default {
                 name: 'detailPage',
                 params: {
                   itemID: nutritionStore.itemsData.find(
-                    (e) => e.name === item.itemName
+                    (e: nutritionData) => e.name === item.itemName
                   )?.id,
                 },
               })
             "
-            class="d-flex align-items-center info-circle"
+            class="d-flex align-items-center info-circle ms-3"
           >
             <i class="fa-sharp fa-solid fa-circle-info"></i>
           </div>
@@ -114,6 +116,17 @@ export default {
 
   &-container:active {
     transform: translateY(5px);
+  }
+}
+
+.info {
+  &-circle {
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  &-circle:hover.info-circle {
+    opacity: 0.5;
   }
 }
 </style>
