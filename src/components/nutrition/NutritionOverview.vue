@@ -1,5 +1,6 @@
 <script lang="ts">
 import { nutritionStore } from "../../store/store";
+import CustomButtonVue from "../ui/CustomButton.vue";
 import CustomAdd from "./CustomAdd.vue";
 import SingleItem from "./SingleItem.vue";
 
@@ -7,14 +8,20 @@ export default {
   data() {
     return {
       nutritionStore,
+      show: false,
     };
   },
   props: [],
   components: {
     SingleItem,
     CustomAdd,
+    CustomButtonVue,
   },
-  methods: {},
+  methods: {
+    showHandler: function () {
+      this.show = !this.show;
+    },
+  },
   mounted() {},
 };
 </script>
@@ -29,17 +36,41 @@ export default {
       v-bind:product="item"
       data-aos="fade-up"
     />
-    <CustomAdd />
   </div>
-
-  <!-- 
-  <div>
-    Derzeit kann einem bestimmten Food-Item im Nachhinein nicht anerkannt
-    werden, wie viel Nährwerte diesem Item zuzuweisen sind. Um eine solche Logik
-    zu implementieren, bräuchte man einen state mit Array, das jedes Food-Item
-    auflistet und jeweilig spezifisch/individuell die dazugehörigen Werte
-    zuweist
-    <h3>Es sollte von Kommazahlen abgewichen werden.</h3>
-    <h3>Card-Design erstellen (background colors)</h3>
-  </div> -->
+  <div
+    @click="showHandler"
+    class="custom-button-container mx-auto mt-5"
+    data-aos="fade-up"
+  >
+    <CustomButtonVue name="Toggle add menu" icon="fa-solid fa-plus" />
+  </div>
+  <CustomAdd v-if="show" />
 </template>
+
+<style scoped lang="scss">
+.custom-button {
+  &-container {
+    border: 1px solid var(--accentColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 275px;
+    padding: 10px;
+    transition: all 0.25s;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-container:hover {
+    background-color: var(--accentColor);
+    color: var(--darkFontColor);
+  }
+
+  &-container:active {
+    transform: translateY(5px);
+  }
+}
+</style>

@@ -29,6 +29,12 @@ export default {
       if (!name) {
         nutritionStore.error = { boolean: true, message: "name is missing" };
         return;
+      } else if (!amount) {
+        nutritionStore.error = {
+          boolean: true,
+          message: "gram amount is missing",
+        };
+        return;
       }
       kcal = (kcal / this.inputAmount) * amount;
       fat = (fat / this.inputAmount) * amount;
@@ -60,8 +66,14 @@ export default {
 </script>
 
 <template>
-  Eine Custom Add Funktion hinzufügen für ein Lebensmittel der eigenen Wahl.
   <div class="d-flex flex-column">
+    <div class="mx-auto mt-3 mb-3 text-center" style="width: 75%">
+      Add a custom food product.
+      <br />
+      Provide the corresponding nutrition values per input gram
+      <br />
+      (default: per 100g).
+    </div>
     <div class="mx-auto d-flex div-main-container" style="width: 75%">
       <div class="form-group me-4" data-aos="fade-up">
         <span>name</span>
@@ -74,7 +86,7 @@ export default {
       </div>
 
       <div class="form-group" data-aos="fade-up">
-        <span>amount</span>
+        <span>gram</span>
         <input class="form-field" type="number" v-model="amount" min="0" />
       </div>
     </div>
