@@ -8,8 +8,16 @@ export default {
 </script>
 
 <template>
-  <div class="d-flex justify-content-between">
-    <div>{{ type }}:</div>
-    <div>{{ nutritionValues?.values[type] }}{{ unit }}</div>
+  <div class="row">
+    <div class="col-lg-8 type">{{ type }}:</div>
+    <div class="col-lg-4 value">
+      {{ nutritionValues?.values[type] }}{{ unit }}
+    </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+.value {
+  margin-right: 0;
+}
+</style>
