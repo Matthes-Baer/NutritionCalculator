@@ -19,7 +19,7 @@
         <li>responsive design optimieren überall</li>
         <li>AOS scrolling ggf. weiter hinzufügen?</li>
         <li>AOS npm install wieder entfernen (läuft jetzt über CDN)?</li>
-        <li>Wird der deploy bei Vercel aktualisiert?</li>
+        <li>Custom Nutrition item add hinzufügen?</li>
         <li>...?</li>
       </ul>
     </div>

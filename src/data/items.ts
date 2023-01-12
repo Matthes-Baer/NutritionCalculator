@@ -44,6 +44,20 @@ export const DATA: nutritionData[] = [
     info: "Long grain",
     image: "Test",
   },
+  {
+    id: 7,
+    name: "Potato",
+    values: { kcal: 68, fat: 0.1, carbs: 14.8, protein: 2.0 },
+    info: "Without peel",
+    image: "Test",
+  },
+  {
+    id: 8,
+    name: "Salmon",
+    values: { kcal: 131, fat: 6.3, carbs: 0, protein: 18 },
+    info: "",
+    image: "Test",
+  },
 ];
 
 export const findSpecificItem = (id: number) => {
