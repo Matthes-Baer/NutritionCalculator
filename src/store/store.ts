@@ -48,7 +48,9 @@ export const nutritionStore = reactive({
       protein.toString().length > 3 ? +protein.toFixed(2) : protein;
 
     if (
-      !nutritionStore.currentNutrition.items?.find((e) => e.itemName === name)
+      !nutritionStore.currentNutrition.items?.find(
+        (e: { itemName: string; customAdd: boolean }) => e.itemName === name
+      )
     ) {
       nutritionStore.currentNutrition.items?.push({
         itemName: name,
