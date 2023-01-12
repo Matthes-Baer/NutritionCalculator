@@ -1,11 +1,11 @@
 <script lang="ts">
 import { nutritionStore } from "@/store/store";
+import CustomButton from "../ui/CustomButton.vue";
 
 export default {
   data() {
     return {
       nutritionStore,
-
       kcal: 0,
       fat: 0,
       carbs: 0,
@@ -34,7 +34,6 @@ export default {
       fat = (fat / this.inputAmount) * amount;
       carbs = (carbs / this.inputAmount) * amount;
       protein = (protein / this.inputAmount) * amount;
-
       nutritionStore.addToCurrentNutrition(
         kcal,
         fat,
@@ -56,57 +55,98 @@ export default {
   mounted() {
     nutritionStore.error = { boolean: false, message: "" };
   },
+  components: { CustomButton },
 };
 </script>
 
 <template>
   Eine Custom Add Funktion hinzufügen für ein Lebensmittel der eigenen Wahl.
-  <div class="row">
-    <div data-aos="fade-up" class="col-lg-12 row">
-      <div class="col-lg-4 form-group" style="flex: 1">
+  <div class="d-flex flex-column">
+    <div class="mx-auto d-flex div-main-container" style="width: 75%">
+      <div class="form-group me-4" data-aos="fade-up">
         <span>name</span>
         <input class="form-field" type="text" v-model="name" />
       </div>
-      <div class="col-lg-4 form-group" style="flex: 1">
+
+      <div class="form-group me-4" data-aos="fade-up">
         <span>input gram</span>
         <input class="form-field" type="number" v-model="inputAmount" />
       </div>
+
+      <div class="form-group" data-aos="fade-up">
+        <span>amount</span>
+        <input class="form-field" type="number" v-model="amount" min="0" />
+      </div>
     </div>
-    <div class="col-lg-12">
-      <div class="d-flex align-items-center form-group me-4" style="flex: 1">
+    <div class="mx-auto d-flex div-main-container mt-4" style="width: 75%">
+      <div class="form-group me-4" data-aos="fade-up">
         <span>kcal</span>
         <input class="form-field" type="number" v-model="kcal" min="0" />
       </div>
 
-      <div class="d-flex align-items-center form-group me-4" style="flex: 1">
+      <div class="form-group me-4" data-aos="fade-up">
         <span>fat</span>
         <input class="form-field" type="number" v-model="fat" min="0" />
       </div>
-    </div>
 
-    <div class="d-flex align-items-center form-group me-4" style="flex: 1">
-      <span>carbs</span>
-      <input class="form-field" type="number" v-model="carbs" min="0" />
-    </div>
+      <div class="form-group me-4" data-aos="fade-up">
+        <span>carbs</span>
+        <input class="form-field" type="number" v-model="carbs" min="0" />
+      </div>
 
-    <div class="d-flex align-items-center form-group me-4" style="flex: 1">
-      <span>protein</span>
-      <input class="form-field" type="number" v-model="protein" min="0" />
+      <div class="form-group" data-aos="fade-up">
+        <span>protein</span>
+        <input class="form-field" type="number" v-model="protein" min="0" />
+      </div>
     </div>
-
-    <div class="d-flex align-items-center form-group me-4" style="flex: 1">
-      <span>amount</span>
-      <input class="form-field" type="number" v-model="amount" min="0" />
-    </div>
-
     <div
       @click="addHandler(kcal, fat, carbs, protein, name, amount, customAdd)"
+      v-if="name"
+      data-aos="fade-up"
+      class="custom-button-container mx-auto mt-4"
     >
-      Add
+      <CustomButton
+        name="Add"
+        icon="fa-solid fa-plus"
+        v-bind:additionalData="name"
+      />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 @import "../../style/customInput.scss";
+
+.custom-button {
+  &-container {
+    border: 1px solid var(--accentColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-width: 100px;
+    max-width: 50%;
+    padding: 10px;
+    transition: all 0.25s;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-container:hover {
+    background-color: var(--accentColor);
+    color: var(--darkFontColor);
+  }
+
+  &-container:active {
+    transform: translateY(5px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .div-main-container {
+    flex-direction: column;
+  }
+}
 </style>

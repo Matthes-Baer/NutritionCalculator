@@ -20,7 +20,7 @@ export default {
   <div class="d-flex container align-items-center">
     <i :class="icon" class="me-3" style="flex: 1"></i>
     <div style="flex: 4; font-size: small">
-      {{ name }}{{ additionalData && additionalData }}
+      {{ name }} {{ additionalData && additionalData }}
     </div>
   </div>
 </template>
