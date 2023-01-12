@@ -15,12 +15,11 @@ export default {
 <template>
   <div class="d-flex justify-content-center mt-5" data-aos="fade-up">
     <h2 class="heading2">Current Nutrition values</h2>
-    <div class="custom-button-container ms-5">
-      <CustomButton
-        @click="nutritionStore.resetNutritionValues()"
-        name="Reset"
-        icon="fa-solid fa-backward"
-      />
+    <div
+      class="custom-button-container ms-5"
+      @click="nutritionStore.resetNutritionValues()"
+    >
+      <CustomButton name="Reset" icon="fa-solid fa-backward" />
     </div>
   </div>
 

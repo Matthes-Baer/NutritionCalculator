@@ -13,7 +13,28 @@ export default {
   props: ["product"],
   components: { CustomButton },
   //? Functions have to be implemented as methods - In this case I used a store function.
-  methods: {},
+  methods: {
+    addHandler: function (
+      kcal: number,
+      fat: number,
+      carbs: number,
+      protein: number,
+      name: string,
+      amount: number,
+      customAdd: boolean
+    ) {
+      nutritionStore.addToCurrentNutrition(
+        kcal,
+        fat,
+        carbs,
+        protein,
+        name,
+        amount,
+        customAdd
+      );
+      this.amount = 0;
+    },
+  },
   mounted() {
     nutritionStore.error = { boolean: false, message: "" };
   },
@@ -45,7 +66,7 @@ export default {
         <div
           class="d-flex align-items-center custom-button-container"
           @click="
-            nutritionStore.addToCurrentNutrition(
+            addHandler(
               (product.values.kcal / 100) * amount,
               (product.values.fat / 100) * amount,
               (product.values.carbs / 100) * amount,
