@@ -15,6 +15,34 @@ export const nutritionStore = reactive({
       items: [""],
     };
   },
+  addToCurrentNutrition: function (
+    kcal: number,
+    fat: number,
+    carbs: number,
+    protein: number,
+    name: string,
+    amount: number
+  ) {
+    nutritionStore.error = { boolean: false, message: "" };
+    if (!amount) {
+      nutritionStore.error.boolean = true;
+      nutritionStore.error.message = "No gram value picked";
+      return;
+    }
+
+    nutritionStore.currentNutrtion.kcal +=
+      kcal.toString().length > 3 ? +kcal.toFixed(2) : kcal;
+    nutritionStore.currentNutrtion.fat +=
+      fat.toString().length > 3 ? +fat.toFixed(2) : fat;
+    nutritionStore.currentNutrtion.carbs +=
+      carbs.toString().length > 3 ? +carbs.toFixed(2) : carbs;
+    nutritionStore.currentNutrtion.protein +=
+      protein.toString().length > 3 ? +protein.toFixed(2) : protein;
+
+    if (!nutritionStore.currentNutrtion.items.find((e) => e === name)) {
+      nutritionStore.currentNutrtion.items.push(name);
+    }
+  },
   //! Currently I'm using a method directly in the respecitve component
   // addToCurrentNutrition: function (
   //   kcal: number,

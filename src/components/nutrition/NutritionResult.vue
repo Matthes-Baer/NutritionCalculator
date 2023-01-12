@@ -1,5 +1,5 @@
 <script lang="ts">
-import { nutritionStore } from "../../store/store";
+import { nutritionStore } from "@/store/store";
 import CustomButton from "../ui/CustomButton.vue";
 
 export default {
@@ -17,7 +17,7 @@ export default {
     <h2 class="heading2">Current Nutrition values</h2>
     <div class="custom-button-container ms-5">
       <CustomButton
-        @clicked="nutritionStore.resetNutritionValues()"
+        @click="nutritionStore.resetNutritionValues()"
         name="Reset"
         icon="fa-solid fa-backward"
       />

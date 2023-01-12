@@ -11,38 +11,8 @@ export default {
   },
   props: ["product"],
   components: { CustomButton },
-  // Functions have to be implemented as methods - There is also the opportunity to add such methods directly in the corresponding store.
-  methods: {
-    addToCurrentNutrition: function (
-      kcal: number,
-      fat: number,
-      carbs: number,
-      protein: number,
-      name: string
-    ) {
-      nutritionStore.error = { boolean: false, message: "" };
-      if (!this.amount) {
-        nutritionStore.error.boolean = true;
-        nutritionStore.error.message = "No gram value picked";
-        return;
-      }
-
-      nutritionStore.currentNutrtion.kcal +=
-        kcal.toString().length > 3 ? +kcal.toFixed(2) : kcal;
-      nutritionStore.currentNutrtion.fat +=
-        fat.toString().length > 3 ? +fat.toFixed(2) : fat;
-      nutritionStore.currentNutrtion.carbs +=
-        carbs.toString().length > 3 ? +carbs.toFixed(2) : carbs;
-      nutritionStore.currentNutrtion.protein +=
-        protein.toString().length > 3 ? +protein.toFixed(2) : protein;
-
-      this.amount = 0;
-
-      if (!nutritionStore.currentNutrtion.items.find((e) => e === name)) {
-        nutritionStore.currentNutrtion.items.push(name);
-      }
-    },
-  },
+  //? Functions have to be implemented as methods - In this case I used a store function.
+  methods: {},
   mounted() {
     nutritionStore.error = { boolean: false, message: "" };
   },
@@ -74,12 +44,13 @@ export default {
         <div
           class="d-flex align-items-center custom-button-container"
           @click="
-            addToCurrentNutrition(
+            nutritionStore.addToCurrentNutrition(
               (product.values.kcal / 100) * amount,
               (product.values.fat / 100) * amount,
               (product.values.carbs / 100) * amount,
               (product.values.protein / 100) * amount,
-              product.name
+              product.name,
+              amount
             )
           "
         >
