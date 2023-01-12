@@ -61,7 +61,6 @@ export default {
 
 <template>
   Eine Custom Add Funktion hinzufügen für ein Lebensmittel der eigenen Wahl.
-  Styling anpassen. AOS scroll?
   <div class="row">
     <div data-aos="fade-up" class="col-lg-12 row">
       <div class="col-lg-4 form-group" style="flex: 1">
