@@ -62,26 +62,27 @@ export default {
 <template>
   Eine Custom Add Funktion hinzufügen für ein Lebensmittel der eigenen Wahl.
   Styling anpassen. AOS scroll?
-  <div class="d-flex flex-column">
-    <div class="d-flex align-items-center form-group me-4" style="flex: 1">
-      <span>name</span>
-      <input class="form-field" type="text" v-model="name" />
+  <div class="row">
+    <div data-aos="fade-up" class="col-lg-12 row">
+      <div class="col-lg-4 form-group" style="flex: 1">
+        <span>name</span>
+        <input class="form-field" type="text" v-model="name" />
+      </div>
+      <div class="col-lg-4 form-group" style="flex: 1">
+        <span>input gram</span>
+        <input class="form-field" type="number" v-model="inputAmount" />
+      </div>
     </div>
+    <div class="col-lg-12">
+      <div class="d-flex align-items-center form-group me-4" style="flex: 1">
+        <span>kcal</span>
+        <input class="form-field" type="number" v-model="kcal" min="0" />
+      </div>
 
-    <div class="d-flex align-items-center form-group me-4" style="flex: 1">
-      Welche Nährwerte pro input gram default = 100
-      <span>input gram</span>
-      <input class="form-field" type="number" v-model="inputAmount" />
-    </div>
-
-    <div class="d-flex align-items-center form-group me-4" style="flex: 1">
-      <span>kcal</span>
-      <input class="form-field" type="number" v-model="kcal" min="0" />
-    </div>
-
-    <div class="d-flex align-items-center form-group me-4" style="flex: 1">
-      <span>fat</span>
-      <input class="form-field" type="number" v-model="fat" min="0" />
+      <div class="d-flex align-items-center form-group me-4" style="flex: 1">
+        <span>fat</span>
+        <input class="form-field" type="number" v-model="fat" min="0" />
+      </div>
     </div>
 
     <div class="d-flex align-items-center form-group me-4" style="flex: 1">
