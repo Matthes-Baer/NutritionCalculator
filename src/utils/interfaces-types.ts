@@ -5,3 +5,11 @@ export interface nutritionData {
   info: string;
   image: string;
 }
+
+export interface currentNutritionData {
+  kcal: number;
+  carbs: number;
+  fat: number;
+  protein: number;
+  items: [{ itemName: string; customAdd: boolean }];
+}

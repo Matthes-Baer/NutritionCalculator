@@ -10,7 +10,7 @@ export const nutritionStore = reactive({
     carbs: 0,
     fat: 0,
     protein: 0,
-    items: [{}],
+    items: [{ itemName: "", customAdd: false }],
   } as currentNutritionData,
   error: { boolean: false, message: "" },
   resetNutritionValues: function () {
@@ -56,22 +56,4 @@ export const nutritionStore = reactive({
       });
     }
   },
-  //! Currently I'm using a method directly in the respecitve component
-  // addToCurrentNutrition: function (
-  //   kcal: number,
-  //   fat: number,
-  //   sugar: number,
-  //   proteine: number,
-  //   name: string
-  // ) {
-  //   if (kcal | fat | sugar | proteine) {
-  //     store.currentNutrtion.kcal += kcal;
-  //     store.currentNutrtion.fat += fat;
-  //     store.currentNutrtion.sugar += sugar;
-  //     store.currentNutrtion.proteine += proteine;
-  //     store.currentNutrtion.items.push(name);
-  //   } else {
-  //     alert("Pick a value for kcal, fat, sugar and/or proteine");
-  //   }
-  // },
 });
