@@ -66,13 +66,30 @@ export default {
     </div>
     <div class="col-md-12" data-aos="fade-up">
       <h4>Included food items</h4>
-      <p
+      <div
         v-for="(item, index) in nutritionStore.currentNutrition.items"
         :key="index"
         data-aos="fade-up"
       >
-        {{ item.itemName }}
-      </p>
+        <p>{{ item.itemName }}</p>
+        <div v-if="!item.customAdd && item.itemName">
+          <div
+            @click="
+              $router.push({
+                name: 'detailPage',
+                params: {
+                  itemID: nutritionStore.itemsData.find(
+                    (e) => e.name === item.itemName
+                  )?.id,
+                },
+              })
+            "
+            class="d-flex align-items-center info-circle"
+          >
+            <i class="fa-sharp fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

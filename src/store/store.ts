@@ -1,5 +1,6 @@
 import { reactive } from "vue";
 import { SORTED_DATA } from "../data/items";
+import type { currentNutritionData } from "@/utils/interfaces-types";
 
 export const nutritionStore = reactive({
   // Can be put in the store or as a variable in the respective component.
@@ -9,8 +10,8 @@ export const nutritionStore = reactive({
     carbs: 0,
     fat: 0,
     protein: 0,
-    items: [{ itemName: "", customAdd: false }],
-  },
+    items: [{}],
+  } as currentNutritionData,
   error: { boolean: false, message: "" },
   resetNutritionValues: function () {
     this.currentNutrition = {
@@ -47,9 +48,12 @@ export const nutritionStore = reactive({
       protein.toString().length > 3 ? +protein.toFixed(2) : protein;
 
     if (
-      !nutritionStore.currentNutrition.items.find((e) => e.itemName === name)
+      !nutritionStore.currentNutrition.items?.find((e) => e.itemName === name)
     ) {
-      nutritionStore.currentNutrition.items.push({ itemName: name, customAdd });
+      nutritionStore.currentNutrition.items?.push({
+        itemName: name,
+        customAdd,
+      });
     }
   },
   //! Currently I'm using a method directly in the respecitve component

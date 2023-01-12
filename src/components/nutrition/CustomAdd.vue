@@ -60,7 +60,8 @@ export default {
 </script>
 
 <template>
-  Eine Custom Add Funktion hinzufügen für ein Lebensmittel der eigenen Wahl
+  Eine Custom Add Funktion hinzufügen für ein Lebensmittel der eigenen Wahl.
+  Styling anpassen. AOS scroll?
   <div class="d-flex flex-column">
     <div class="d-flex align-items-center form-group me-4" style="flex: 1">
       <span>name</span>
