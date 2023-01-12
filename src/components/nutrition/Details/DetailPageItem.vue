@@ -28,7 +28,10 @@ export default {
     <div class="col-lg-12">
       <div class="d-flex align-items-center">
         <div>Name:</div>
-        <div>{{ specificItem?.name }} ({{ specificItem?.info }})</div>
+        <div>
+          {{ specificItem?.name }}
+          {{ specificItem?.info && `(${specificItem?.info})` }}
+        </div>
       </div>
       <div>
         <div>Nutrition Values (per 100g)</div>
