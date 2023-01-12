@@ -19,7 +19,15 @@
         <li>responsive design optimieren überall</li>
         <li>AOS scrolling ggf. weiter hinzufügen?</li>
         <li>AOS npm install wieder entfernen (läuft jetzt über CDN)?</li>
-        <li>Custom Nutrition item add hinzufügen?</li>
+        <li>
+          Custom Nutrition item add hinzufügen? - benötigt dann extra Markierung
+          (für custom add können keine details generiert werden).
+        </li>
+        <li>Styling anpassen für custom Add component.</li>
+        <li>
+          Bei Included Food Items Button für Details Page zum jeweiligen Produkt
+          hinzufügen, welches kein custom add ist.
+        </li>
         <li>...?</li>
       </ul>
     </div>

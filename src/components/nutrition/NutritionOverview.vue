@@ -1,5 +1,6 @@
 <script lang="ts">
 import { nutritionStore } from "../../store/store";
+import CustomAdd from "./CustomAdd.vue";
 import SingleItem from "./SingleItem.vue";
 
 export default {
@@ -11,6 +12,7 @@ export default {
   props: [],
   components: {
     SingleItem,
+    CustomAdd,
   },
   methods: {},
   mounted() {},
@@ -27,6 +29,7 @@ export default {
       v-bind:product="item"
       data-aos="fade-up"
     />
+    <CustomAdd />
   </div>
 
   <!-- 

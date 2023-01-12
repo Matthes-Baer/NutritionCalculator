@@ -7,6 +7,7 @@ export default {
     return {
       nutritionStore,
       amount: 0,
+      customAdd: false,
     };
   },
   props: ["product"],
@@ -50,7 +51,8 @@ export default {
               (product.values.carbs / 100) * amount,
               (product.values.protein / 100) * amount,
               product.name,
-              amount
+              amount,
+              customAdd
             )
           "
         >

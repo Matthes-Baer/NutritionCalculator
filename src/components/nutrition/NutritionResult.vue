@@ -29,9 +29,9 @@ export default {
       <h4>Kcal</h4>
       <p>
         {{
-          nutritionStore.currentNutrtion.kcal.toString().length > 3
-            ? +nutritionStore.currentNutrtion.kcal.toFixed(2)
-            : nutritionStore.currentNutrtion.kcal
+          nutritionStore.currentNutrition.kcal.toString().length > 3
+            ? +nutritionStore.currentNutrition.kcal.toFixed(2)
+            : nutritionStore.currentNutrition.kcal
         }}
       </p>
     </div>
@@ -39,9 +39,9 @@ export default {
       <h4>Fat</h4>
       <p>
         {{
-          nutritionStore.currentNutrtion.fat.toString().length > 3
-            ? +nutritionStore.currentNutrtion.fat.toFixed(2)
-            : nutritionStore.currentNutrtion.fat
+          nutritionStore.currentNutrition.fat.toString().length > 3
+            ? +nutritionStore.currentNutrition.fat.toFixed(2)
+            : nutritionStore.currentNutrition.fat
         }}
       </p>
     </div>
@@ -49,9 +49,9 @@ export default {
       <h4>Carbs</h4>
       <p>
         {{
-          nutritionStore.currentNutrtion.carbs.toString().length > 3
-            ? +nutritionStore.currentNutrtion.carbs.toFixed(2)
-            : nutritionStore.currentNutrtion.carbs
+          nutritionStore.currentNutrition.carbs.toString().length > 3
+            ? +nutritionStore.currentNutrition.carbs.toFixed(2)
+            : nutritionStore.currentNutrition.carbs
         }}
       </p>
     </div>
@@ -59,20 +59,20 @@ export default {
       <h4>Protein</h4>
       <p>
         {{
-          nutritionStore.currentNutrtion.protein.toString().length > 3
-            ? +nutritionStore.currentNutrtion.protein.toFixed(2)
-            : nutritionStore.currentNutrtion.protein
+          nutritionStore.currentNutrition.protein.toString().length > 3
+            ? +nutritionStore.currentNutrition.protein.toFixed(2)
+            : nutritionStore.currentNutrition.protein
         }}
       </p>
     </div>
     <div class="col-md-12" data-aos="fade-up">
       <h4>Included food items</h4>
       <p
-        v-for="(item, index) in nutritionStore.currentNutrtion.items"
+        v-for="(item, index) in nutritionStore.currentNutrition.items"
         :key="index"
         data-aos="fade-up"
       >
-        {{ item }}
+        {{ item.itemName }}
       </p>
     </div>
   </div>

@@ -4,15 +4,21 @@ import { SORTED_DATA } from "../data/items";
 export const nutritionStore = reactive({
   // Can be put in the store or as a variable in the respective component.
   itemsData: SORTED_DATA(),
-  currentNutrtion: { kcal: 0, carbs: 0, fat: 0, protein: 0, items: [""] },
+  currentNutrition: {
+    kcal: 0,
+    carbs: 0,
+    fat: 0,
+    protein: 0,
+    items: [{ itemName: "", customAdd: false }],
+  },
   error: { boolean: false, message: "" },
   resetNutritionValues: function () {
-    this.currentNutrtion = {
+    this.currentNutrition = {
       kcal: 0,
       carbs: 0,
       fat: 0,
       protein: 0,
-      items: [""],
+      items: [{ itemName: "", customAdd: false }],
     };
   },
   addToCurrentNutrition: function (
@@ -21,7 +27,8 @@ export const nutritionStore = reactive({
     carbs: number,
     protein: number,
     name: string,
-    amount: number
+    amount: number,
+    customAdd: boolean
   ) {
     nutritionStore.error = { boolean: false, message: "" };
     if (!amount) {
@@ -30,17 +37,19 @@ export const nutritionStore = reactive({
       return;
     }
 
-    nutritionStore.currentNutrtion.kcal +=
+    nutritionStore.currentNutrition.kcal +=
       kcal.toString().length > 3 ? +kcal.toFixed(2) : kcal;
-    nutritionStore.currentNutrtion.fat +=
+    nutritionStore.currentNutrition.fat +=
       fat.toString().length > 3 ? +fat.toFixed(2) : fat;
-    nutritionStore.currentNutrtion.carbs +=
+    nutritionStore.currentNutrition.carbs +=
       carbs.toString().length > 3 ? +carbs.toFixed(2) : carbs;
-    nutritionStore.currentNutrtion.protein +=
+    nutritionStore.currentNutrition.protein +=
       protein.toString().length > 3 ? +protein.toFixed(2) : protein;
 
-    if (!nutritionStore.currentNutrtion.items.find((e) => e === name)) {
-      nutritionStore.currentNutrtion.items.push(name);
+    if (
+      !nutritionStore.currentNutrition.items.find((e) => e.itemName === name)
+    ) {
+      nutritionStore.currentNutrition.items.push({ itemName: name, customAdd });
     }
   },
   //! Currently I'm using a method directly in the respecitve component
