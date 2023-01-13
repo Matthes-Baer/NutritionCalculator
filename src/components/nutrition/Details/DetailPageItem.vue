@@ -2,6 +2,7 @@
 import router from "@/router";
 import { findSpecificItem } from "@/data/items";
 import DetailsItemNutrition from "./DetailsItemNutrition.vue";
+import CustomButton from "@/components/ui/CustomButton.vue";
 
 export default {
   data() {
@@ -16,11 +17,14 @@ export default {
       return new URL(`../../../assets/images/${name}`, import.meta.url).href;
     },
   },
-  components: { DetailsItemNutrition },
+  components: { DetailsItemNutrition, CustomButton },
 };
 </script>
 
 <template>
+  <div class="custom-button-container mx-auto" @click="$router.back()">
+    <CustomButton name="Back" icon="fa-solid fa-backward" />
+  </div>
   <div class="row p-3 main-container mx-auto mt-5">
     <div class="col-lg-12">
       <h1>Details</h1>
@@ -85,6 +89,28 @@ img {
 .main-container {
   box-shadow: 5px 5px 0px 0px var(--accentColor);
   width: 50%;
+}
+
+.custom-button {
+  &-container {
+    border: 1px solid var(--accentColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.25s;
+    width: 125px;
+    cursor: pointer;
+  }
+
+  &-container:hover {
+    background-color: var(--accentColor);
+    color: var(--darkFontColor);
+  }
+
+  &-container:active {
+    transform: translateY(5px);
+  }
 }
 
 @media only screen and (max-width: 991px) {

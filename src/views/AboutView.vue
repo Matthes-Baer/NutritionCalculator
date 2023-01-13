@@ -7,22 +7,13 @@
       TODO:
       <ul>
         <li>
-          items data erweitern (Bilder, mehr Informationen etc.) für die details
-          page
+          HomeView/AboutView vervollständigen bzgl. Styling (Bilder?, Text?)
         </li>
-        <li>Details Page bearbeiten - Bilder anpassen</li>
-        <li>HomeView/AboutView vervollständigen bzgl. Styling (Bilder?)</li>
         <li>About Page etwas erweitern mit Informationen zum Projekt</li>
         <li>
           potential images: https://www.vexels.com/merch/designs/flat-people/
         </li>
         <li>responsive design optimieren überall</li>
-        <li>AOS npm install wieder entfernen (läuft jetzt über CDN)?</li>
-        <li>
-          Bei Included Food Items Button für Details Page zum jeweiligen Produkt
-          hinzufügen, welches kein custom add ist.
-        </li>
-        <li>...?</li>
       </ul>
     </div>
   </div>
