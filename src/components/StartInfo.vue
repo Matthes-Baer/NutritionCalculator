@@ -10,11 +10,9 @@ export default {
     <div class="half-container">
       <h1><span class="underlined">Nutrition</span> Calculator</h1>
       <p>
-        This is my first vue.js application and is fully frontend While this
-        project mainly serves the purpose of getting familiar with vue.js
-        fundamentals, there is also a small nutrition calculator implemented.
-        The corresponding nutrition values were manually searched and
-        implemented.
+        Calculate your daily nutrition food values based on eight fixed items as
+        well as the opportunity to fully customize the food iteam you want to
+        add.
       </p>
     </div>
     <div class="half-container">

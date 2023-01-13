@@ -28,7 +28,10 @@ export default {
 
 <template>
   <!-- <div v-for="item in items" :key="item.id">{{ item.name }}</div> -->
-  <div class="row justify-content-evenly text-center mt-5">
+  <div
+    class="row justify-content-evenly text-center mt-5 main-container"
+    data-aos="fade-up"
+  >
     <!-- To loop through data with a component the loop has to be integrated in the component while the items within the loop have to be integrated as props in the respective component - v-bind: is identical to : -->
     <SingleItem
       v-for="item in nutritionStore.itemsData"
@@ -48,6 +51,12 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.main-container {
+  background-image: url("../../assets/images/woman-running.png");
+  background-position: right top;
+  background-size: 20%;
+  background-repeat: no-repeat;
+}
 .custom-button {
   &-container {
     border: 1px solid var(--accentColor);

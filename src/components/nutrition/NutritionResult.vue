@@ -14,7 +14,10 @@ export default {
 </script>
 
 <template>
-  <div class="d-flex justify-content-center mt-5" data-aos="fade-up">
+  <div
+    class="d-flex justify-content-center mt-5 header-and-button"
+    data-aos="fade-up"
+  >
     <h2 class="heading2">Current Nutrition values</h2>
     <div
       class="custom-button-container ms-5"
@@ -127,6 +130,13 @@ export default {
 
   &-circle:hover.info-circle {
     opacity: 0.5;
+  }
+}
+
+@media (max-width: 915px) {
+  .header-and-button {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
