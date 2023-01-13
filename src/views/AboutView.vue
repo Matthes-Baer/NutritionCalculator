@@ -6,12 +6,15 @@
     <div>
       TODO:
       <ul>
+        <li>HomeView/AboutView vervollständigen bzgl. Styling (Bilder?)</li>
         <li>
-          HomeView/AboutView vervollständigen bzgl. Styling (Bilder?, Text?)
+          HomeView Text oben anpassen (die derzeitigen dastehenden Infos eher
+          auf AboutView verschieben?)
         </li>
         <li>About Page etwas erweitern mit Informationen zum Projekt</li>
         <li>
-          potential images: https://www.vexels.com/merch/designs/flat-people/
+          potential images: https://www.vexels.com/merch/designs/flat-people/ -
+          background image, damit es mit AOS scroll reinkommt?
         </li>
         <li>responsive design optimieren überall</li>
       </ul>
