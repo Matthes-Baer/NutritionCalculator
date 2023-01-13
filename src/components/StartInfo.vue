@@ -14,7 +14,7 @@ export default {
       <h1><span class="underlined">Nutrition</span> Calculator</h1>
       <p>
         Calculate your daily nutrition food values based on eight fixed items as
-        well as the opportunity to fully customize the food iteam you want to
+        well as the opportunity to fully customize the food item you want to
         add.
       </p>
     </div>

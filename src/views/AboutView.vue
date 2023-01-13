@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import FooterComp from "@/components/FooterComp.vue";
+</script>
 
 <template>
   <div class="background-image-container" data-aos="fade-up">
@@ -11,7 +13,7 @@
         <br />
         <br />
         Besides basic SCSS for styling purposes, I used TypeScript to work on
-        this project. Besides that the project is also optimized in terms of
+        this project. Besides that, the project is also optimized in terms of
         responsive design for the most part.
         <br />
         <br />
@@ -19,6 +21,7 @@
       </div>
     </div>
   </div>
+  <FooterComp />
 </template>
 
 <style scoped lang="scss">
