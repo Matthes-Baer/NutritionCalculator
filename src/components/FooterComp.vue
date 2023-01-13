@@ -28,7 +28,9 @@ export default {};
     </div>
   </div>
 
-  <div class="d-flex align-items-center justify-content-center mt-2">
+  <div
+    class="d-flex align-items-center justify-content-center mt-2 rights-reserved"
+  >
     <i class="fa-solid fa-copyright me-3"></i>
     <div class="icon-text">All rights reserved.</div>
   </div>
@@ -66,6 +68,12 @@ a {
 .grid {
   &-part {
     height: 100%;
+  }
+}
+
+@media (max-width: 219px) {
+  .rights-reserved {
+    flex-direction: column;
   }
 }
 </style>

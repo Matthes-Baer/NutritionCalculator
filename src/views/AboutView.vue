@@ -21,6 +21,7 @@ import FooterComp from "@/components/FooterComp.vue";
       </div>
     </div>
   </div>
+
   <FooterComp />
 </template>
 
@@ -32,8 +33,8 @@ import FooterComp from "@/components/FooterComp.vue";
 }
 
 .background-image-container {
-  height: 750px;
   position: relative;
+  min-height: 900px;
 
   &::before {
     content: "";
