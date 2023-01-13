@@ -1,33 +1,50 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <div>
-      TODO:
-      <ul>
-        <li>HomeView/AboutView vervollständigen bzgl. Styling (Bilder?)</li>
-        <li>
-          HomeView Text oben anpassen (die derzeitigen dastehenden Infos eher
-          auf AboutView verschieben?)
-        </li>
-        <li>About Page etwas erweitern mit Informationen zum Projekt</li>
-        <li>
-          potential images: https://www.vexels.com/merch/designs/flat-people/ -
-          background image, damit es mit AOS scroll reinkommt?
-        </li>
-        <li>responsive design optimieren überall</li>
-      </ul>
+  <div class="background-image-container" data-aos="fade-up">
+    <div class="main-container mx-auto">
+      <h1>About this project</h1>
+      <div>
+        This is a front-end project made with Vue.js that mainly focuses on
+        being able to work with the fundamental features of this framework,
+        including a global store, router features and more.
+        <br />
+        <br />
+        Besides basic SCSS for styling purposes, I used TypeScript to work on
+        this project. Besides that the project is also optimized in terms of
+        responsive design for the most part.
+        <br />
+        <br />
+        This project was finalized in January 2023.
+      </div>
     </div>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+<style scoped lang="scss">
+.main-container {
+  width: 75%;
+  border-bottom: 1px solid var(--accentColor);
+  padding: 15px;
+}
+
+.background-image-container {
+  height: 750px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url("../assets/images/woman-running-3.png");
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    z-index: -1;
   }
 }
 </style>

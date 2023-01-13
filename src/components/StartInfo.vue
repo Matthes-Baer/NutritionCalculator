@@ -6,7 +6,10 @@ export default {
 };
 </script>
 <template>
-  <div class="d-flex text-center main-container background-image-container">
+  <div
+    class="d-flex text-center main-container background-image-container"
+    data-aos="fade-up"
+  >
     <div class="half-container">
       <h1><span class="underlined">Nutrition</span> Calculator</h1>
       <p>
