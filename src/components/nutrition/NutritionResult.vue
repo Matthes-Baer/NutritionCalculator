@@ -20,7 +20,7 @@ export default {
   >
     <h2 class="heading2">Current Nutrition values</h2>
     <div
-      class="custom-button-container ms-5"
+      class="custom-button-container"
       @click="nutritionStore.resetNutritionValues()"
     >
       <CustomButton name="Reset" icon="fa-solid fa-backward" />
@@ -110,6 +110,7 @@ export default {
     padding: 10px;
     transition: all 0.25s;
     cursor: pointer;
+    margin-left: 30px;
   }
 
   &-container:hover {
@@ -137,6 +138,10 @@ export default {
   .header-and-button {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+  .custom-button-container {
+    margin: 0;
   }
 }
 </style>
