@@ -9,15 +9,7 @@ export default {
 
 <template>
   <div class="row">
-    <div class="col-lg-8 type">{{ type }}:</div>
-    <div class="col-lg-4 value">
-      {{ nutritionValues?.values[type] }}{{ unit }}
-    </div>
+    <div class="col-lg-8">{{ type }}:</div>
+    <div class="col-lg-4">{{ nutritionValues?.values[type] }}{{ unit }}</div>
   </div>
 </template>
-
-<style scoped lang="scss">
-.value {
-  margin-right: 0;
-}
-</style>

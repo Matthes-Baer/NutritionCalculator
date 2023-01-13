@@ -39,9 +39,7 @@ export default {
       </div>
       <div>
         <div class="mt-3">Nutrition Values (per 100g):</div>
-        <div
-          class="d-flex flex-column align-items-between nutrition-values-container"
-        >
+        <div class="d-flex flex-column nutrition-values-container">
           <DetailsItemNutrition :nutritionValues="specificItem" type="kcal" />
           <DetailsItemNutrition
             :nutritionValues="specificItem"
@@ -122,6 +120,16 @@ img {
     box-shadow: none;
     border-top: 1px solid var(--accentColor);
     border-bottom: 1px solid var(--accentColor);
+    text-align: center;
+    width: auto;
+  }
+
+  .nutrition-values-container {
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    align-items: center;
   }
 }
 </style>
