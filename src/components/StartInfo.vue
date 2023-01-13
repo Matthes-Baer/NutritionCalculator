@@ -6,7 +6,7 @@ export default {
 };
 </script>
 <template>
-  <div class="d-flex text-center main-container">
+  <div class="d-flex text-center main-container background-image-container">
     <div class="half-container">
       <h1><span class="underlined">Nutrition</span> Calculator</h1>
       <p>
@@ -164,6 +164,25 @@ export default {
 
   .square {
     display: none;
+  }
+}
+
+.background-image-container {
+  position: relative;
+  // Methode, um background-image opacity anzupassen
+  &::before {
+    content: "";
+    background-image: url("../assets/images/flat-food.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    z-index: -1;
   }
 }
 
