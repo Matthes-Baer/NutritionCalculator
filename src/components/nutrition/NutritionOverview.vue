@@ -52,7 +52,7 @@ export default {
 
 <style scoped lang="scss">
 .main-container {
-  background-image: url("../../assets/images/woman-running.png");
+  background-image: url("../../assets/images/woman-running.webp");
   background-position: right top;
   background-size: 20%;
   background-repeat: no-repeat;

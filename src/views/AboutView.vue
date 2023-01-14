@@ -43,7 +43,7 @@ import FooterComp from "@/components/FooterComp.vue";
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-image: url("../assets/images/woman-running-3.png");
+    background-image: url("../assets/images/woman-running-3.webp");
     background-position: right bottom;
     background-size: contain;
     background-repeat: no-repeat;

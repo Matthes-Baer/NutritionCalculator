@@ -174,7 +174,7 @@ export default {
   // Methode, um background-image opacity anzupassen
   &::before {
     content: "";
-    background-image: url("../assets/images/flat-food.png");
+    background-image: url("../assets/images/flat-food.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left bottom;

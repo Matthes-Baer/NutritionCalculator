@@ -22,10 +22,14 @@ export default {
 </script>
 
 <template>
-  <div class="custom-button-container mx-auto" @click="$router.back()">
+  <div
+    class="custom-button-container mx-auto"
+    @click="$router.back()"
+    data-aos="fade-up"
+  >
     <CustomButton name="Back" icon="fa-solid fa-backward" />
   </div>
-  <div class="row p-3 main-container mx-auto mt-5">
+  <div class="row p-3 main-container mx-auto mt-5" data-aos="fade-up">
     <div class="col-lg-12">
       <h1>Details</h1>
     </div>
