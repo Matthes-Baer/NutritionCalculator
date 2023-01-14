@@ -22,7 +22,7 @@ export default {
       <div class="square squareRight">step by step</div>
       <div class="square squareHidden">healthy mind</div>
       <h1 class="hover-appear" style="font-size: 30px">
-        embrace an healthy lifestyle
+        embrace a healthy lifestyle
       </h1>
     </div>
   </div>
