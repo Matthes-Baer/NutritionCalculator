@@ -28,7 +28,7 @@ export const DATA: nutritionData[] = [
     name: "Cheese",
     values: { kcal: 127, fat: 5.6, carbs: 2.8, protein: 15.5 },
     info: "From a goat",
-    image: "Cheese.png",
+    image: "Cheese.webp",
   },
   {
     id: 5,

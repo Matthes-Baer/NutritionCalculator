@@ -9,5 +9,3 @@ import FooterComp from "../components/FooterComp.vue";
   <NutritionSectionVue />
   <FooterComp />
 </template>
-
-<style></style>

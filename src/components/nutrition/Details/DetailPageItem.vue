@@ -31,8 +31,8 @@ export default {
     </div>
     <div class="col-lg-12 position-relative">
       <div class="row">
-        <div class="col-lg-3">Name:</div>
-        <div class="col-lg-9">
+        <div class="col-lg-2">Name:</div>
+        <div class="col-lg-10">
           {{ specificItem?.name }}
           {{ specificItem?.info && `(${specificItem?.info})` }}
         </div>
