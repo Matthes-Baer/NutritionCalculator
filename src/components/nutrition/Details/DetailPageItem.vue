@@ -12,11 +12,11 @@ export default {
       ),
     };
   },
-  methods: {
-    getImageUrl: (name: string) => {
-      return new URL(`../../../assets/images/${name}`, import.meta.url).href;
-    },
-  },
+  // methods: {
+  //   getImageUrl: (name: string) => {
+  //     return new URL(`../../../assets/images/${name}`, import.meta.url).href;
+  //   },
+  // },
   components: { DetailsItemNutrition, CustomButton },
 };
 </script>
@@ -63,7 +63,7 @@ export default {
         </div>
       </div>
       <div v-if="specificItem?.image" class="img-container">
-        <img :src="getImageUrl(specificItem.image)" />
+        <img :src="specificItem.image" />
       </div>
     </div>
   </div>
