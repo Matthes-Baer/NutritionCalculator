@@ -7,6 +7,7 @@ export default {};
       <a
         href="https://www.linkedin.com/in/matthes-b%C3%A4r-68199a256/"
         target="_blank"
+        rel="noreferrer"
       >
         <i class="fa-brands fa-linkedin icon"></i>
       </a>
@@ -16,13 +17,18 @@ export default {};
       <a
         href="https://www.freecodecamp.org/news/author/matthes/"
         target="_blank"
+        rel="noreferrer"
       >
         <i class="fa-solid fa-newspaper icon"></i>
       </a>
     </div>
 
     <div class="d-flex align-items-center">
-      <a href="https://github.com/Matthes-Baer" target="_blank">
+      <a
+        href="https://github.com/Matthes-Baer"
+        target="_blank"
+        rel="noreferrer"
+      >
         <i class="fa-brands fa-github icon"></i
       ></a>
     </div>
