@@ -6,10 +6,17 @@ export default {
 };
 </script>
 <template>
-  <div
-    class="d-flex text-center main-container background-image-container"
-    data-aos="fade-up"
-  >
+  <div class="d-flex text-center main-container" data-aos="fade-up">
+    <div class="background-image-container">
+      <img
+        v-lazy="{
+          src: '/images/flat-food.webp',
+          loading: 'background image loading',
+          error: 'background image loading error',
+        }"
+        alt="person holding healthy food"
+      />
+    </div>
     <div class="half-container">
       <h1><span class="underlined">Nutrition</span> Calculator</h1>
       <p>
@@ -38,7 +45,7 @@ export default {
 }
 
 .main-container {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .main-container:hover .line {
@@ -171,20 +178,45 @@ export default {
 
 .background-image-container {
   position: relative;
-  // Methode, um background-image opacity anzupassen
-  &::before {
-    content: "";
-    background-image: url("/images/flat-food.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left bottom;
+
+  & > img {
     position: absolute;
     top: 0px;
-    right: 0px;
     bottom: 0px;
-    left: 0px;
+    left: 300px;
     opacity: 0.2;
     z-index: -1;
+    height: auto;
+    width: 15vw;
+    transition: all 0.25s;
+  }
+  // Methode, um background-image opacity anzupassen
+  // &::before {
+  //   content: "";
+  //   background-image: url("/images/flat-food.webp");
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-position: left bottom;
+  //   position: absolute;
+  //   top: 0px;
+  //   right: 0px;
+  //   bottom: 0px;
+  //   left: 0px;
+  //   opacity: 0.2;
+  //   z-index: -1;
+  // }
+}
+
+@media only screen and (max-width: 1040px) {
+  .background-image-container img {
+    top: 100px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .background-image-container img {
+    left: 25px;
+    width: 200px;
   }
 }
 
@@ -193,6 +225,11 @@ export default {
     font-size: 30px;
     align-self: center;
     text-align: center;
+  }
+
+  .background-image-container img {
+    left: 0px;
+    width: 150px;
   }
 }
 </style>

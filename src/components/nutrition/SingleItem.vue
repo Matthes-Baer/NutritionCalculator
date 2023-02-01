@@ -61,7 +61,14 @@ export default {
       <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center form-group me-4" style="flex: 1">
           <span>gram</span>
-          <input class="form-field" type="number" v-model="amount" min="0" />
+
+          <input
+            class="form-field"
+            type="number"
+            v-model="amount"
+            aria-label="{{ product.name }} label"
+            min="0"
+          />
         </div>
         <div
           class="d-flex align-items-center custom-button-container"

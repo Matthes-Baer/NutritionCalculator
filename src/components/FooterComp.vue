@@ -8,6 +8,7 @@ export default {};
         href="https://www.linkedin.com/in/matthes-b%C3%A4r-68199a256/"
         target="_blank"
         rel="noreferrer"
+        aria-label="linkedin profile"
       >
         <i class="fa-brands fa-linkedin icon"></i>
       </a>
@@ -18,6 +19,7 @@ export default {};
         href="https://www.freecodecamp.org/news/author/matthes/"
         target="_blank"
         rel="noreferrer"
+        aria-label="freeCodeCamp profile"
       >
         <i class="fa-solid fa-newspaper icon"></i>
       </a>
@@ -28,6 +30,7 @@ export default {};
         href="https://github.com/Matthes-Baer"
         target="_blank"
         rel="noreferrer"
+        aria-label="github profile"
       >
         <i class="fa-brands fa-github icon"></i
       ></a>

@@ -38,6 +38,7 @@ SORTED_DATA();
   font-family: "PressStart2P";
   src: local("PressStart2P"),
     url(./fonts/PressStart2P-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 
 body {
