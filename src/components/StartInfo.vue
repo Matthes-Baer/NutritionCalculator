@@ -11,8 +11,6 @@ export default {
       <img
         v-lazy="{
           src: '/images/flat-food.webp',
-          loading: 'background image loading',
-          error: 'background image loading error',
         }"
         alt="person holding healthy food"
       />
