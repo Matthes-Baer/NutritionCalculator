@@ -16,7 +16,7 @@ export default {};
 
     <div class="d-flex align-items-center me-3">
       <a
-        href="https://www.freecodecamp.org/news/author/matthes/"
+        href="https://www.freecodecamp.org/news/author/matthes-bar/"
         target="_blank"
         rel="noreferrer"
         aria-label="freeCodeCamp profile"
