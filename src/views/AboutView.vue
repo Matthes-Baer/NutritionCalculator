@@ -22,7 +22,9 @@ import FooterComp from "@/components/FooterComp.vue";
     </div>
   </div>
 
-  <FooterComp />
+  <div class="footer-container">
+    <FooterComp />
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -32,9 +34,16 @@ import FooterComp from "@/components/FooterComp.vue";
   padding: 15px;
 }
 
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .background-image-container {
   position: relative;
-  min-height: 900px;
+  min-height: 250px;
 
   &::before {
     content: "";
@@ -49,6 +58,7 @@ import FooterComp from "@/components/FooterComp.vue";
     background-repeat: no-repeat;
     opacity: 0.25;
     z-index: -1;
+    transition: all 1s;
   }
 }
 </style>
