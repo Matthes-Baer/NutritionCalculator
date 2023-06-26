@@ -58,7 +58,6 @@ import FooterComp from "@/components/FooterComp.vue";
     background-repeat: no-repeat;
     opacity: 0.25;
     z-index: -1;
-    transition: all 1s;
   }
 }
 </style>
