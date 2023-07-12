@@ -34,7 +34,7 @@ export const nutritionStore = reactive({
     nutritionStore.error = { boolean: false, message: "" };
     if (!amount) {
       nutritionStore.error.boolean = true;
-      nutritionStore.error.message = "No gram value picked";
+      nutritionStore.error.message = "no gram value picked";
       return;
     }
 

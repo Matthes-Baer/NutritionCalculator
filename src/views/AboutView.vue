@@ -5,19 +5,16 @@ import FooterComp from "@/components/FooterComp.vue";
 <template>
   <div class="background-image-container" data-aos="fade-up">
     <div class="main-container mx-auto">
-      <h1>About this project</h1>
+      <h1>About This Project</h1>
       <div>
-        This is a front-end project made with Vue.js that mainly focuses on
-        being able to work with the fundamental features of this framework,
-        including a global store, router features and more.
+        This front-end project, built with Vue.js, primarily emphasizes the
+        utilization of fundamental features within this framework, such as a
+        global store and router functionalities.
         <br />
         <br />
-        Besides basic SCSS for styling purposes, I used TypeScript to work on
-        this project. Besides that, the project is also optimized in terms of
-        responsive design for the most part.
-        <br />
-        <br />
-        This project was finalized in January 2023.
+        In addition to basic SCSS for styling, TypeScript was employed for
+        development purposes. Furthermore, the project has been optimized to
+        ensure responsive design across various devices.
       </div>
     </div>
   </div>

@@ -18,8 +18,9 @@ export default {
     <div class="half-container">
       <h1><span class="underlined">Nutrition</span> Calculator</h1>
       <p>
-        Calculate your daily nutrition food values using eight fixed items and
-        take advantage of the opportunity to add food items on your own.
+        Optimize your daily nutrition tracking by utilizing a selection of eight
+        predefined food items, while also having the flexibility to include
+        additional items of your choice.
       </p>
     </div>
     <div class="half-container">
@@ -167,6 +168,7 @@ export default {
 
   .half-container {
     height: auto;
+    width: 100%;
   }
 
   .square {

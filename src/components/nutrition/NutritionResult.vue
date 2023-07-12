@@ -18,7 +18,7 @@ export default {
     class="d-flex justify-content-center mt-5 header-and-button"
     data-aos="fade-up"
   >
-    <h2 class="heading2">Current Nutrition values</h2>
+    <h2 class="heading2">Current Nutrition Values</h2>
     <div
       class="custom-button-container"
       @click="nutritionStore.resetNutritionValues()"
@@ -69,7 +69,7 @@ export default {
       </p>
     </div>
     <div class="col-md-12" data-aos="fade-up">
-      <h4>Included food items</h4>
+      <h4>Included Food Items</h4>
       <div
         v-for="(item, index) in nutritionStore.currentNutrition.items"
         :key="index"

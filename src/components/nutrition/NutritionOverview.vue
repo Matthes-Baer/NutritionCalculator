@@ -27,7 +27,6 @@ export default {
 </script>
 
 <template>
-  <!-- <div v-for="item in items" :key="item.id">{{ item.name }}</div> -->
   <div
     class="row justify-content-evenly text-center mt-5 main-container"
     data-aos="fade-up"
@@ -40,13 +39,12 @@ export default {
       data-aos="fade-up"
     />
   </div>
-  <div
-    @click="showHandler"
-    class="custom-button-container mx-auto mt-5"
-    data-aos="fade-up"
-  >
-    <CustomButtonVue name="Toggle add menu" icon="fa-solid fa-plus" />
+  <div data-aos="fade-up">
+    <div @click="showHandler" class="custom-button-container mx-auto mt-5">
+      <CustomButtonVue name="Toggle Add Menu" icon="fa-solid fa-plus" />
+    </div>
   </div>
+
   <CustomAdd v-if="show" />
 </template>
 

@@ -44,20 +44,20 @@ export default {
       <div>
         <div class="mt-3">Nutrition Values (per 100g):</div>
         <div class="d-flex flex-column nutrition-values-container">
-          <DetailsItemNutrition :nutritionValues="specificItem" type="kcal" />
+          <DetailsItemNutrition :nutritionValues="specificItem" type="Kcal" />
           <DetailsItemNutrition
             :nutritionValues="specificItem"
-            type="fat"
+            type="Fat"
             unit="g"
           />
           <DetailsItemNutrition
             :nutritionValues="specificItem"
-            type="carbs"
+            type="Carbs"
             unit="g"
           />
           <DetailsItemNutrition
             :nutritionValues="specificItem"
-            type="protein"
+            type="Protein"
             unit="g"
           />
         </div>
