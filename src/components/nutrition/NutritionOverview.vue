@@ -50,10 +50,20 @@ export default {
 
 <style scoped lang="scss">
 .main-container {
-  background-image: url("/images/woman-running.webp");
-  background-position: right top;
-  background-size: 20%;
-  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url("/images/man-running.webp");
+    background-position: right bottom;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    z-index: -1;
+  }
 }
 .custom-button {
   &-container {
