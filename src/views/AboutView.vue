@@ -4,6 +4,11 @@ import FooterComp from "@/components/FooterComp.vue";
 
 <template>
   <div class="background-image-container" data-aos="fade-up">
+    <img
+      class="background-image-element"
+      src="/images/woman-running-3.webp"
+      alt="running person"
+    />
     <div class="main-container mx-auto">
       <h1>About This Project</h1>
       <div>
@@ -38,22 +43,18 @@ import FooterComp from "@/components/FooterComp.vue";
   transform: translate(-50%, 0);
 }
 
-.background-image-container {
-  position: relative;
-  min-height: 250px;
-
-  &::before {
-    content: "";
+.background-image {
+  &-container {
+    position: relative;
+    min-height: 250px;
+  }
+  &-element {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-image: url("/images/woman-running-3.webp");
-    background-position: right bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.25;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 350px;
+    opacity: 0.4 !important;
     z-index: -1;
   }
 }
