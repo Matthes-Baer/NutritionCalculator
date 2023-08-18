@@ -27,10 +27,13 @@ export default {
 </script>
 
 <template>
-  <div
-    class="row justify-content-evenly text-center mt-5 main-container"
+  <img
+    class="background-image"
+    src="/images/man-running.webp"
+    alt="running person"
     data-aos="fade-up"
-  >
+  />
+  <div class="row justify-content-evenly text-center mt-5" data-aos="fade-up">
     <!-- To loop through data with a component the loop has to be integrated in the component while the items within the loop have to be integrated as props in the respective component - v-bind: is identical to : -->
     <SingleItem
       v-for="item in nutritionStore.itemsData"
@@ -49,21 +52,13 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.main-container {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-image: url("/images/man-running.webp");
-    background-position: right bottom;
-    background-size: 25%;
-    background-repeat: no-repeat;
-    opacity: 0.25;
-    z-index: -1;
-  }
+.background-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: 275px;
+  opacity: 0.4 !important;
 }
 .custom-button {
   &-container {
